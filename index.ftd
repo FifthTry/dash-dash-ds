@@ -804,31 +804,36 @@ region: h0
 padding-bottom: 12
 
 
+--- ftd.row: 
+id: dash-row
+width: fill
+spacing: 7
+
 --- ftd.row:
 if: not $fpm.mobile
-spacing: 5
-padding-top: 30
-anchor: parent
-top: 0
-left: -65
+spacing: 3
+align: center
 
 --- ftd.row:
-height: 5
+height: 4
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
 --- ftd.row:
-height: 5
+height: 4
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
---- container: ftd.main
+--- container: dash-row
 
-
+--- ftd.row:
+if: not $fpm.mobile
+spacing: 10
+width: fill
 
 --- ftd.text:
 text: $title
@@ -844,9 +849,24 @@ padding-bottom: 16
 padding-top: 8
 font: Roboto
 
+--- ftd.text: :
+if: not $fpm.mobile
+move-left: 7
+size: 46
+line-height: 46
+color: $neutral-800
+color if $fpm.dark-mode: $neutral
+style: bold
+padding-bottom: 16
+padding-top: 8
+font: Roboto
+
+--- container: ftd.main
+
 --- markdown:
 if: $body is not null
 body: $body
+
 
 -- ftd.column subtitle:
 caption title:
