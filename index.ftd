@@ -185,7 +185,6 @@ open: main-container
 --- header:
 
 --- ftd.row:
-width: fill
 max-width: 1440
 id: main-row
 align: center
@@ -193,14 +192,13 @@ align: center
 --- ftd.column:
 id: main-container
 min-height: calc 100vh - 0px
-max-width: 800
-min-width: 800
+max-width: 850
 align: top
-margin-left: 92
+/margin-left: auto
 /margin-right: 92
 margin-top: 50
 padding-horizontal: 90
-padding-vertical: 20
+padding-vertical: 40
 background-color: $content-light-color
 background-color if $fpm.dark-mode: $content-dark-color
 border-top-radius: 30
