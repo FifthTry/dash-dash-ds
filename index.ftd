@@ -790,8 +790,8 @@ optional boolean collapsed:
 optional caption title:
 optional boolean two_columns:
 text: $body
-size: 16
-line-height: 22
+size: 18
+line-height: 25
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
 padding-bottom: 8
@@ -884,31 +884,34 @@ region: h1
 padding-bottom: 12
 spacing: 10
 
+--- ftd.row: 
+id: dash-row
+width: fill
+spacing: 7
+
 --- ftd.row:
 if: not $fpm.mobile
-spacing: 5
-padding-top: 30
-anchor: parent
-top: 8
-left: -65
+spacing: 3
+align: center
 
 --- ftd.row:
 height: 4
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
 --- ftd.row:
 height: 4
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
---- container: ftd.main
+--- container: dash-row
 
-/--- ftd.column:
+--- ftd.row:
+if: not $fpm.mobile
 spacing: 10
 width: fill
 
@@ -924,6 +927,18 @@ padding-bottom: 18
 padding-top: 16
 font: Roboto-700
 
+--- ftd.text: :
+if: not $fpm.mobile
+move-left: 7
+size: 32
+line-height: 26
+color: $neutral-800
+color if $fpm.dark-mode: $neutral
+padding-bottom: 18
+padding-top: 16
+font: Roboto-700
+
+--- container: ftd.main
 
 --- markdown:
 if: $body is not null
@@ -938,30 +953,37 @@ width: fill
 region: h2
 padding-bottom: 12
 
+
+--- ftd.row: 
+id: dash-row
+width: fill
+
 --- ftd.row:
 if: not $fpm.mobile
-spacing: 5
-padding-top: 30
-anchor: parent
-top: -3
-left: -65
+spacing: 3
+align: center
 
 --- ftd.row:
 height: 3
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
 --- ftd.row:
 height: 3
 background-color: #BDBFCA
-width: 25
+width: 21
+align: center
 open: false
-align: top
 
---- container: ftd.main
+--- container: dash-row
 
+--- ftd.row:
+if: not $fpm.mobile
+spacing: 10
+width: fill
+move-right: 7
 
 --- ftd.text:
 caption $title:
@@ -971,10 +993,22 @@ size: 26
 line-height: 26
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 15
 padding-top: 16
 font: Roboto
+
+--- ftd.text: :
+if: not $fpm.mobile
+move-left: 7
+size: 26
+line-height: 26
+color: $neutral-800
+color if $fpm.dark-mode: $neutral
+padding-bottom: 15
+padding-top: 16
+font: Roboto
+
+--- container: ftd.main
 
 --- markdown:
 if: $body is not null
