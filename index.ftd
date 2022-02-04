@@ -193,7 +193,7 @@ align: center
 id: main-container
 min-height: calc 100vh - 0px
 max-width: 850
-align: top
+height: percent 100
 /margin-left: auto
 /margin-right: 92
 margin-top: 50
@@ -267,8 +267,7 @@ footer-toc: $footer-toc
 -- ftd.text site-link: $title
 caption title:
 size: 16
-style: semi-bold
-font: Roboto
+font: Roboto-700
 color: white
 color if $fpm.dark-mode: $neutral
 line-height: 22
@@ -301,7 +300,6 @@ text: $title
 size: 40
 color: black
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 24
 font: Roboto
 
@@ -494,9 +492,8 @@ min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 8
-font: Roboto
+font: Roboto-700
 color: $neutral
-style: semi-bold
 
 --- footer-link: $obj.title
 $loop$: $footer-toc.children as $obj
@@ -622,7 +619,6 @@ position: center
 --- ftd.text: $title
 size: 36
 line-height: 50
-style: bold
 color: $neutral
 padding-horizontal: 20
 position: center
@@ -659,13 +655,12 @@ size: 20
 caption title:
 text: $title
 size: 24
-style: semi-bold
 padding: 45
 text-align: center
 color: #25c19f
 background-color: transparent
 width: fill
-font: Roboto
+font: Roboto-700
 
 
 
@@ -726,8 +721,6 @@ toc: $obj
 toc-item list toc-obj:
 sticky: true
 top: 0
-height: calc 100vh - 0px
-overflow-y: auto
 width: $toc-sidebar-width
 align: top-left
 padding-left: 0
@@ -844,10 +837,9 @@ size: 46
 line-height: 46
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 16
 padding-top: 8
-font: Roboto
+font: Roboto-700
 
 --- ftd.text: :
 if: not $fpm.mobile
@@ -856,10 +848,9 @@ size: 46
 line-height: 46
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 16
 padding-top: 8
-font: Roboto
+font: Roboto-700
 
 --- container: ftd.main
 
@@ -885,7 +876,6 @@ size: 24
 line-height: 24
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: italic
 padding-bottom: 8
 padding-top: 16
 
@@ -1048,7 +1038,6 @@ size: 21
 line-height: 30
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 8
 padding-top: 16
 font: Roboto
@@ -1073,7 +1062,6 @@ size: 18
 line-height: 24
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 12
 padding-top: 34
 font: Roboto
@@ -1096,7 +1084,6 @@ size: 16
 line-height: 22
 color: $neutral-800
 color if $fpm.dark-mode: $neutral
-style: bold
 padding-bottom: 12
 padding-top: 34
 font: Roboto
@@ -1220,7 +1207,6 @@ size: 22
 font: Roboto
 width: fill
 text-align: center
-style: bold
 color if $fpm.dark-mode: $neutral
 
 
@@ -1282,7 +1268,6 @@ size: 20
 font: Roboto
 width: fill
 text-align: center
-style: bold
 color if $fpm.dark-mode: $neutral
 
 --- ftd.text: $designation
@@ -1386,8 +1371,7 @@ color if $fpm.dark-mode: $neutral
 align: center
 width: fill
 size: 17
-style: italic
-font: Open sans
+font: Roboto
 
 --- markdown:
 if: $body is not null
@@ -1441,11 +1425,10 @@ margin-bottom: 50
 
 --- ftd.text: $title
 size: 20
-style: semi-bold
 anchor: parent
 top: 5
 left: 0
-font: Roboto
+font: Roboto-700
 background-color: #919191
 padding-horizontal: 20
 padding-vertical: 5
@@ -1501,11 +1484,10 @@ margin-bottom: 50
 
 --- ftd.text: $title
 size: 20
-style: semi-bold
 anchor: parent
 top: 5
 left: 0
-font: Roboto
+font: Roboto-700
 background-color: #919191
 padding-horizontal: 20
 padding-vertical: 5
@@ -1566,7 +1548,6 @@ size: 16
 color: $neutral-700
 color if $fpm.dark-mode: white
 font: Roboto
-style: medium
 
 --- ftd.image:
 if: $link is not null
@@ -1580,7 +1561,6 @@ if: $link is null
 color: $neutral-600
 color if $fpm.dark-mode: white
 font: Roboto
-style: medium
 
 
 -- ftd.text highlight: $title
