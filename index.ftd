@@ -188,6 +188,7 @@ open: main-container
 max-width: 1440
 id: main-row
 align: center
+padding-vertical: 40
 
 --- ftd.column:
 id: main-container
@@ -196,12 +197,10 @@ max-width: 850
 height: percent 100
 /margin-left: auto
 /margin-right: 92
-margin-top: 50
 padding-horizontal: 90
-padding-vertical: 40
 background-color: $content-light-color
 background-color if $fpm.dark-mode: $content-dark-color
-border-top-radius: 30
+border-radius: 20
 
 --- container: main-row
 
