@@ -271,7 +271,7 @@ color: white
 color if $fpm.dark-mode: $neutral
 line-height: 22
 align: center
-white
+white-space: nowrap
 
 
 -- ftd.text header-link: $title
