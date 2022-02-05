@@ -2,7 +2,7 @@
 -- boolean sidebar-open: false
 
 -- string neutral: #F6F7FB
-/-- string neutral-200: #e5e5e5
+-- string neutral-200: #DDDDDD
 -- string neutral-200: #EDEDED
 -- string neutral-300: #F9F9F9
 -- string neutral-400: #E1E1E1
@@ -160,7 +160,7 @@ open: main-container
 background-parallax: true
 background-image: $bg-desktop-light
 background-image if $fpm.dark-mode: $bg-desktop-dark
-background-color: $neutral
+background-color: $neutral-200
 background-color if $fpm.dark-mode: $neutral-700
 
 
@@ -675,7 +675,6 @@ link: $toc.url
 text: $toc.title
 size: 20
 line-height: 24
-min-width: fill
 padding-left: 30
 padding-top: 3
 padding-bottom: 6
@@ -685,11 +684,39 @@ border-color: #4540D9
 border-color $fpm.dark-mode: #B4B2F1
 font: Roboto-700
 color: $neutral-700
+text-transform: uppercase
 color if $fpm.dark-mode: $neutral-200
+
+--- toc-second-level-child:
+$loop$: $toc.children as $obj
+toc: $obj
+
+-- ftd.column toc-second-level-child:
+toc-item toc:
+padding-top: 2
+padding-bottom: 2
+
+--- ftd.text:
+toc-item toc:
+link: $toc.url
+text: $toc.title
+size: 16
+line-height: 18
+min-width: fit-content
+padding-left: 20
+padding-top: 3
+padding-bottom: 3
+font: Roboto-300
+color: $neutral-700
+color if $fpm.dark-mode: $neutral-200
+border-bottom: 1
+border-color: #4540D9
+border-color $fpm.dark-mode: #B4B2F1
 
 --- toc-instance-child:
 $loop$: $toc.children as $obj
 toc: $obj
+
 
 -- ftd.column toc-instance-child:
 toc-item toc:
@@ -723,7 +750,7 @@ top: 0
 width: $toc-sidebar-width
 align: top-left
 padding-left: 0
-padding-top: 100
+padding-top: 30
 padding-right: 20
 padding-bottom: 40
 /border-left: 1
