@@ -266,7 +266,7 @@ footer-toc: $footer-toc
 -- ftd.text site-link: $title
 caption title:
 size: 16
-font: Roboto-700
+font: Lato-700
 color: white
 color if $fpm.dark-mode: $neutral
 line-height: 22
@@ -278,7 +278,7 @@ white
 caption title:
 string link:
 size: 16
-font: Roboto
+font: Lato
 color: white
 color if $fpm.dark-mode: $neutral
 link: $link
@@ -298,9 +298,10 @@ padding-horizontal: 90
 text: $title
 size: 42
 color: black
+line-height: 48.3
 color if $fpm.dark-mode: $neutral
 padding-bottom: 24
-font: Roboto
+font: Lato
 
 --- markdown:
 if: $body is not null
@@ -477,7 +478,7 @@ min-width: fit-content
 padding-left: 10
 padding-top: 6
 padding-bottom: 6
-font: Roboto
+font: Lato
 color: $neutral
 
 -- ftd.column footer-instance:
@@ -491,7 +492,7 @@ min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 8
-font: Roboto-700
+font: Lato-700
 color: $neutral
 
 --- footer-link: $obj.title
@@ -581,7 +582,7 @@ line-height: 80
 color: $neutral
 width: percent 75
 position: center
-font: Roboto-700
+font: Lato-700
 
 --- ftd.image:
 src: $image
@@ -622,7 +623,7 @@ color: $neutral
 padding-horizontal: 20
 position: center
 text-align: center
-font: Roboto
+font: Lato
 
 --- container: ftd.main
 
@@ -646,7 +647,7 @@ color: $color
 border-radius: 6
 padding-vertical: 15
 padding-horizontal: 40
-font: Roboto-700
+font: Lato-700
 size: 20
 
 
@@ -659,7 +660,7 @@ text-align: center
 color: #25c19f
 background-color: transparent
 width: fill
-font: Roboto-700
+font: Lato-700
 
 
 
@@ -673,16 +674,18 @@ width: fill
 toc-item toc:
 link: $toc.url
 text: $toc.title
-size: 20
-line-height: 24
+size: 14
+line-height: 16
 padding-left: 30
 padding-top: 3
+padding-bottom: 10
 padding-bottom: 6
-margin-bottom: 5
+margin-top: 21
+margin-bottom: 21
 border-bottom: 2
 border-color: #4540D9
 border-color $fpm.dark-mode: #B4B2F1
-font: Roboto-700
+font: Lato-700
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
 
@@ -705,12 +708,12 @@ min-width: fit-content
 padding-left: 20
 padding-top: 3
 padding-bottom: 3
-font: Roboto-300
+font: Lato-300
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
-border-bottom: 1
-border-color: #4540D9
-border-color $fpm.dark-mode: #B4B2F1
+/border-bottom: 1
+/border-color: #4540D9
+/border-color $fpm.dark-mode: #B4B2F1
 
 --- toc-instance-child:
 $loop$: $toc.children as $obj
@@ -733,7 +736,7 @@ min-width: fit-content
 padding-left: 20
 padding-top: 3
 padding-bottom: 3
-font: Roboto-300
+font: Lato-300
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
 
@@ -749,7 +752,7 @@ top: 0
 width: $toc-sidebar-width
 align: top-left
 padding-left: 0
-padding-top: 30
+padding-top: 10
 padding-right: 20
 padding-bottom: 40
 /border-left: 1
@@ -806,12 +809,14 @@ optional boolean collapsed:
 optional caption title:
 optional boolean two_columns:
 text: $body
-size: 18
-line-height: 25
+size: 21
+line-height: 31
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
 padding-bottom: 8
-font: Roboto
+font: Lato-300
+margin-top: 21
+margin-bottom: 21
 
 
 -- ftd.column h0:
@@ -864,7 +869,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 16
 padding-top: 8
-font: Roboto-700
+font: Lato-700
 
 --- ftd.text: :
 if: not $fpm.mobile
@@ -875,7 +880,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 16
 padding-top: 8
-font: Roboto-700
+font: Lato-700
 
 --- container: ftd.main
 
@@ -896,7 +901,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-font: Roboto
+font: Lato
 size: 24
 line-height: 24
 color: $neutral-800
@@ -958,7 +963,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 18
 padding-top: 16
-font: Roboto-700
+font: Lato-700
 
 --- ftd.text: :
 if: not $fpm.mobile
@@ -969,7 +974,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 18
 padding-top: 16
-font: Roboto-700
+font: Lato-700
 
 --- container: ftd.main
 
@@ -1028,7 +1033,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 15
 padding-top: 16
-font: Roboto
+font: Lato
 
 --- ftd.text: :
 if: not $fpm.mobile
@@ -1039,7 +1044,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 15
 padding-top: 16
-font: Roboto
+font: Lato
 
 --- container: ftd.main
 
@@ -1065,7 +1070,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 8
 padding-top: 16
-font: Roboto
+font: Lato
 
 
 --- markdown:
@@ -1089,7 +1094,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 12
 padding-top: 34
-font: Roboto
+font: Lato
 
 --- markdown:
 if: $body is not null
@@ -1111,7 +1116,7 @@ color: $neutral-800
 color if $fpm.dark-mode: $neutral
 padding-bottom: 12
 padding-top: 34
-font: Roboto
+font: Lato
 
 --- markdown:
 if: $body is not null
@@ -1141,7 +1146,7 @@ padding-bottom: 10
 padding-left: 20
 padding-right: 20
 border-top-radius: 4
-font: Roboto
+font: Lato
 background-color: $code-caption-bg-light
 background-color if $fpm.dark-mode: $code-caption-bg-dark
 
@@ -1229,7 +1234,7 @@ align: center
 --- ftd.text: $title
 width: fill
 size: 22
-font: Roboto
+font: Lato
 width: fill
 text-align: center
 color if $fpm.dark-mode: $neutral
@@ -1240,7 +1245,7 @@ text: $body
 width: fill
 size: 15
 line-height: 26
-font: Roboto
+font: Lato
 width: fill
 text-align: center
 color if $fpm.dark-mode: $neutral
@@ -1290,7 +1295,7 @@ align: center
 --- ftd.text: $title
 width: fill
 size: 20
-font: Roboto
+font: Lato
 width: fill
 text-align: center
 color if $fpm.dark-mode: $neutral
@@ -1298,7 +1303,7 @@ color if $fpm.dark-mode: $neutral
 --- ftd.text: $designation
 width: fill
 size: 14
-font: Roboto
+font: Lato
 width: fill
 text-align: center
 color if $fpm.dark-mode: $neutral
@@ -1308,7 +1313,7 @@ text: $body
 width: fill
 size: 15
 line-height: 26
-font: Roboto
+font: Lato
 width: fill
 text-align: center
 color if $fpm.dark-mode: $neutral
@@ -1396,7 +1401,7 @@ color if $fpm.dark-mode: $neutral
 align: center
 width: fill
 size: 17
-font: Roboto
+font: Lato
 
 --- markdown:
 if: $body is not null
@@ -1453,7 +1458,7 @@ size: 20
 anchor: parent
 top: 5
 left: 0
-font: Roboto-700
+font: Lato-700
 background-color: #919191
 padding-horizontal: 20
 padding-vertical: 5
@@ -1463,7 +1468,7 @@ color: white
 --- ftd.text: $cta-text
 if: $active
 size: 15
-font: Roboto
+font: Lato
 text-align: center
 link: $link
 anchor: parent
@@ -1480,7 +1485,7 @@ padding-horizontal: 20
 --- ftd.text: $cta-text
 if: not $active
 size: 15
-font: Roboto
+font: Lato
 text-align: center
 anchor: parent
 bottom: 30
@@ -1512,7 +1517,7 @@ size: 20
 anchor: parent
 top: 5
 left: 0
-font: Roboto-700
+font: Lato-700
 background-color: #919191
 padding-horizontal: 20
 padding-vertical: 5
@@ -1530,7 +1535,7 @@ id: link-row
 --- ftd.text: Live Preview
 size: 15
 if: $live_preview is not null
-font: Roboto
+font: Lato
 text-align: center
 link: $live_preview
 color: white
@@ -1542,7 +1547,7 @@ margin-right: 5
 
 --- ftd.text: Create
 size: 15
-font: Roboto
+font: Lato
 text-align: center
 link: $link
 color: white
@@ -1572,7 +1577,7 @@ link: $link
 size: 16
 color: $neutral-700
 color if $fpm.dark-mode: white
-font: Roboto
+font: Lato
 
 --- ftd.image:
 if: $link is not null
@@ -1585,7 +1590,7 @@ width: 16
 if: $link is null
 color: $neutral-600
 color if $fpm.dark-mode: white
-font: Roboto
+font: Lato
 
 
 -- ftd.text highlight: $title
