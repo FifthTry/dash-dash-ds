@@ -188,16 +188,16 @@ open: main-container
 max-width: 1440
 id: main-row
 align: center
-padding-vertical: 40
+padding-top: 10
+padding-bottom: 30
 
 --- ftd.column:
 id: main-container
 min-height: calc 100vh - 0px
 max-width: 850
 height: percent 100
-/margin-left: auto
-/margin-right: 92
-padding-horizontal: 90
+padding-horizontal: 40
+padding-vertical: 40
 background-color: $content-light-color
 background-color if $fpm.dark-mode: $content-dark-color
 border-radius: 20
@@ -296,7 +296,7 @@ padding-horizontal: 90
 
 --- ftd.text:
 text: $title
-size: 40
+size: 42
 color: black
 color if $fpm.dark-mode: $neutral
 padding-bottom: 24
@@ -684,7 +684,6 @@ border-color: #4540D9
 border-color $fpm.dark-mode: #B4B2F1
 font: Roboto-700
 color: $neutral-700
-text-transform: uppercase
 color if $fpm.dark-mode: $neutral-200
 
 --- toc-second-level-child:
