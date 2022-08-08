@@ -48,8 +48,14 @@ On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- ft.page: Quickstart
 
-The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the total amount of memory, in bytes, that the String has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
-When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
+The length is how much memory, in bytes, the contents of the String is currently
+using. The capacity is the total amount of , in bytes, that the String 
+has received from the allocator. The difference between length and capacity 
+matters, but not in this context, so for now, it’s fine to ignore the capacity.
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer,
+the length, and the capacity that are on the stack. We do not copy the data on 
+the heap that the pointer refers to. In other words, the data representation 
+in memory looks like Figure 4-2.
 
 -- ft.code: FPM.ftd
 lang: ftd
@@ -61,8 +67,15 @@ zip: github.com/<username_or_orgname>/<repo_name>/archive/refs/heads/main.zip
 
 \-- ft.markdown:
 
-The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the total amount of memory, in bytes, that the String has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
-When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
+The length is how much memory, in bytes, the contents of the String is currently
+using. The capacity is the total amount of , in bytes, that the String 
+has received from the allocator. The difference between length and capacity 
+matters, but not in this context, so for now, it’s fine to ignore the capacity.
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer,
+the length, and the capacity that are on the stack. We do not copy the data on 
+the heap that the pointer refers to. In other words, the data representation 
+in memory looks like Figure 4-2.
+
 
 -- ft.two-column: Resources
 id: RXI0X-oAAY8
@@ -80,20 +93,20 @@ On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- ft.h2: What are the `id`s present in DOM node?
 
-Here's what `ftd` does. In first instance of `foo`, we haven't defined any id for it.
-So, the corresponding DOM node of it won't get any `id`, and even the `--- ftd.text: hello`
-doesn't get any `id`. 
+Here's what `ftd` does. In first instance of `foo`, we haven't defined any id 
+for it.So, the corresponding DOM node of it won't get any `id`, and even 
+the `--- ftd.text: hello` doesn't get any `id`. 
 
 -- ft.highlight: How to use ftd
 
 The length is how much memory, in bytes, the contents of the String is currently
- using. The capacity is the total amount of {highlight: memory}, in bytes, that the String 
- has received from the allocator. The difference between length and capacity 
- matters, but not in this context, so for now, it’s fine to ignore the capacity.
+using. The capacity is the total amount of , in bytes, that the String 
+has received from the allocator. The difference between length and capacity 
+matters, but not in this context, so for now, it’s fine to ignore the capacity.
 When we assign s1 to s2, the String data is copied, meaning we copy the pointer,
- the length, and the capacity that are on the stack. We do not copy the data on 
- the heap that the pointer refers to. In other words, the data representation 
- in memory looks like Figure 4-2.
+the length, and the capacity that are on the stack. We do not copy the data on 
+the heap that the pointer refers to. In other words, the data representation 
+in memory looks like Figure 4-2.
 
 -- ft.heading: features
 

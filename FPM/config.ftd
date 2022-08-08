@@ -1,6 +1,9 @@
 -- import: fifthtry.github.io/blue-sapphire-cs as blue-sapphire-cs
--- import: fifthtry.github.io/Blue-Sapphire-Theme/index as in
+-- import: fifthtry.github.io/lato/assets as lato-assets
+-- import: fpm
 
---in.site-logo:
-dark: $assets.files.static.site-icon.png.dark
-light: $assets.files.static.site-icon.png.light
+-- fpm.font-copy: $lato-assets.fonts.Lato
+
+-- fpm.font-display: $lato-assets.fonts.Lato
+
+-- fpm.font-code: $lato-assets.fonts.Lato
