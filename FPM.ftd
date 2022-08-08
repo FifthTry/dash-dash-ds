@@ -12,7 +12,6 @@ base: https://raw.githubusercontent.com/fifthtry/Blue-Sapphire-Theme/main
 -- fpm.dependency: fifthtry.github.io/blue-sapphire-cs as blue-sapphire-cs
 -- fpm.auto-import: fifthtry.github.io/Blue-Sapphire-Theme/FPM/config
 
-
 -- fpm.sitemap:
 
 # Home: /

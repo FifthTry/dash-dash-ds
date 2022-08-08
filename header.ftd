@@ -267,8 +267,22 @@ padding-left: 20
 
 --- container: action-container
 
+--- ftd.row:
+id: change
+
 --- ftd.image:
+if: not $ftd.dark-mode
 src: $assets.files.static.dark-mode.svg
+height: 22
+$on-click$: message-host enable-dark-mode
+align: center
+padding-left: 32
+
+--- container: change
+
+--- ftd.image:
+if: $ftd.dark-mode
+src: $assets.files.static.light-mode.svg
 height: 22
 $on-click$: message-host enable-light-mode
 align: center
@@ -726,7 +740,6 @@ optional string link:
 --- ftd.text: $title
 if: $link is null 
 role:$fpm.type.copy-tight
-style: bold
 color: $fpm.color.main.text-strong
 border-bottom: 2
 padding-bottom: 4
@@ -743,7 +756,6 @@ link: $link
 border-bottom: 2
 padding-bottom: 4
 role:$fpm.type.copy-tight
-style: bold
 color: $fpm.color.main.text-strong
 border-color: $fpm.color.main.background.base
 border-color if $is-active: $fpm.color.main.text
