@@ -1,0 +1,21 @@
+-- import: fifthtry.github.io/Blue-Sapphire-Theme as ft
+
+
+-- ft.page:
+
+-- ft.post-single-intro:
+poster: $assets.files.static.picture1.jpeg
+post-title: Lorem ipsum dolor sit amet
+avatar: $assets.files.static.avatar.jpg
+username: John Deo
+user-profile-link: https://in.linkedin.com/in/
+post-category: News & Announcements
+post-category-link: /
+timestamp: March 15, 2022
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Purus non enim 
+praesent elementum facilisis leo vel. Maecenas accumsan lacus vel 
+facilisis volutpat. Magnis dis parturient montes nascetur ridiculus mus. 
+Mauris in aliquam sem fringilla ut morbi tincidunt augue. Pulvinar neque 
+laoreet suspendisse interdum consectetur libero

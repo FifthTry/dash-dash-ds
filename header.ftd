@@ -1,0 +1,1080 @@
+-- import: fifthtry.github.io/product-switcher as ps
+-- import: fpm
+-- import: fifthtry.github.io/lato/assets as lato
+-- import: fifthtry.github.io/Blue-Sapphire-Theme/assets
+
+-- fpm.toc-item list empty-toc:
+
+-- boolean show-section: false
+
+-- string github: NA
+
+-- optional string site-name:
+
+-- optional ftd.image-src site-logo:
+dark: $assets.files.static.site-icon.png.dark
+light:  $assets.files.static.site-icon.png.light
+
+-- string site-url: NA
+
+-- boolean sidebar-open: false
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header:
+ftd.color shadow-color: $fpm.color.main.text-strong
+optional string brand-caption:
+optional string site-name:
+fpm.toc-item list footer-nav: $footer-list
+optional ftd.image-src brand-site-logo:
+optional string brand-site-name:
+optional string brand-site-url:
+optional ftd.image-src site-logo: $site-logo
+string site-url: $site-url
+optional string site-name: $site-name
+optional string brand-caption:
+ftd.color bg-color: $fpm.color.main.background.step-1
+ftd.color bg-hover: $fpm.color.main.background.base
+ftd.color text-color: $fpm.color.main.text
+optional ftd.color active-text-color:
+optional ftd.color bg-section-color:
+optional ftd.color bg-subsection-color:
+boolean parent-brand: false
+ps.product-data list products: $ps.example-product
+boolean pricing-cta: false
+optional ftd.color mobile-sidebar-base:
+fpm.toc-item list header-toc: $empty-toc
+fpm.toc-item list sections: 
+fpm.toc-item list sub-sections: 
+optional fpm.toc-item current-section: 
+optional fpm.toc-item current-subsection: 
+optional fpm.toc-item current-page: 
+optional string login-btn-txt:
+optional string sign-in-txt:
+optional string github-url:
+boolean login-button: false
+width: fill
+ftd.color body-text-color: $fpm.color.main.text
+
+--- mobile-sidebar:
+if: $sidebar-open
+base-color: $fpm.color.main.background.base
+
+--- container: ftd.main
+
+--- menu-mobile:
+if: $sidebar-open
+footer-nav: $footer-nav
+toc-obj: $sections
+parent-brand: $parent-brand
+site-logo: $site-logo
+brand-caption: $brand-caption
+site-url: $site-url 
+site-name: $site-name
+login-button: $login-button
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt
+products: $products
+bg-color: $bg-color
+bg-hover: $bg-hover
+text-color: $text-color
+
+--- header-desktop:
+if: not $is-mobile
+products: $products
+sections: $sections
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+parent-brand: $parent-brand
+login-button: $login-button
+pricing-cta: $pricing-cta
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt
+bg-color: $bg-color
+bg-hover: $bg-hover
+text-color: $text-color
+body-text-color: $body-text-color
+shadow-color: $shadow-color
+github-url: $github-url
+
+--- header-mobile:
+if: $is-mobile
+pricing-cta: $pricing-cta
+brand-site-logo: $brand-site-logo
+brand-site-name: $brand-site-name
+brand-site-url: $brand-site-url
+parent-brand: $parent-brand
+toc: $header-toc
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+products: $products
+github-url: $github-url
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header-desktop:
+ftd.color bg-color:
+ftd.color shadow-color: 
+ftd.color bg-hover: 
+ftd.color text-color: 
+ftd.color body-text-color: $fpm.color.main.text
+ps.product-data list products:
+optional ftd.image-src site-logo: $site-logo
+string site-url: $site-url
+optional string site-name: $site-name
+optional string brand-caption:
+boolean parent-brand:
+boolean pricing-cta:
+fpm.toc-item list sections: 
+fpm.toc-item list sub-sections: 
+optional fpm.toc-item current-section: 
+optional fpm.toc-item current-subsection: 
+optional fpm.toc-item current-page: 
+optional string login-btn-txt:
+optional string sign-in-txt:
+optional string github-url:
+boolean login-button:
+width: fill
+
+--- ftd.row:
+width: fill
+padding-horizontal: 32
+padding-vertical: 15
+background-color: $fpm.color.main.background.base
+id: first-row
+
+--- ftd.row:
+position: left
+id: left-side-top
+align: left
+width: fill
+
+--- ftd.column:
+id: logo-text-container
+
+--- ftd.column:
+if: not $parent-brand
+id: iddd
+
+--- ftd.text:
+text: $brand-caption
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+
+--- container: logo-text-container
+
+--- ftd.row:
+link: $site-url
+
+--- ftd.image:
+if: $site-logo is not null
+src: $site-logo
+width: 113
+height: 47
+width if $is-mobile: 78
+height if $is-mobile: 32
+margin-top: 8
+
+--- ftd.text: $site-name
+if: $site-name is not null
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+
+--- site-link:
+if: $site-logo is null
+site-name: $site-name
+
+--- container: left-side-top
+
+--- ftd.row:
+width: fill
+border-left: 1
+padding-left: $fpm.space.space-5
+margin-left: $fpm.space.space-5
+border-color: $fpm.color.main.border
+margin-top: 8
+
+--- ps.switcher:
+products: $products
+bg-color: $bg-color
+bg-hover: $bg-hover
+text-color: $text-color
+body-text-color: $body-text-color
+shadow-color: $shadow-color
+
+--- container: left-side-top
+
+--- ftd.column:
+width: fill
+position: center
+
+--- ftd.row:
+position: right
+width: auto
+id: action-container
+
+--- header-link: $obj.title
+$loop$: $sections as $obj
+link: $obj.url
+is-active: $obj.is-active
+
+--- pricing-cta-text: Try for Free
+if: $pricing-cta
+
+--- ftd.row:
+if: $login-button
+
+--- login-signup:
+login: $login-btn-txt
+sign-in: $sign-in-txt
+
+
+--- container: action-container
+
+--- ftd.row:
+if: $github-url is not null
+link: $github-url
+
+--- ftd.image:
+src: $assets.files.static.github-light.svg
+height: 22
+$on-click$: message-host enable-light-mode
+align: center
+padding-left: 20
+
+--- container: action-container
+
+--- ftd.image:
+src: $assets.files.static.dark-mode.svg
+height: 22
+$on-click$: message-host enable-light-mode
+align: center
+padding-left: 32
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+padding-horizontal: 32
+background-color: $fpm.color.main.background.step-1
+
+--- ftd.row:
+width: fill
+id: bottom-row
+
+--- ftd.column:
+if: $current-section is not null
+width: fill
+padding-vertical: 15
+
+--- ftd.text: $current-section.title
+if: $current-section.title is not null
+role: $fpm.type.heading-small
+style: bold
+color: $fpm.color.main.text-strong
+link: $current-section.url
+padding-bottom: $fpm.space.space-2
+
+--- ftd.row:
+width: fill
+id: selection-container
+
+--- ftd.text: $current-subsection.title
+if: $current-subsection.title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+link: $current-subsection.url
+white-space: nowrap
+margin-right: 8
+
+--- ftd.row:
+if: $current-subsection.title is not null
+
+--- ftd.row:
+if: $current-page.title is not null
+
+--- ftd.text: ->
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+white-space: nowrap
+margin-right: 8
+
+--- container: selection-container
+
+--- ftd.text:$current-page.title 
+if: $current-page.title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+link: $current-page.url 
+white-space: nowrap
+margin-right: 8
+
+--- container: bottom-row
+
+--- ftd.column:
+id: left-side
+width: fill
+align: right
+padding-vertical if $sub-sections is not empty: 15
+margin-top if $current-subsection.title is not null: 24
+margin-top if $current-subsection.title is null: 8
+
+--- ftd.row:
+width: auto
+align: right
+
+--- header-link: $obj.title
+$loop$: $sub-sections as $obj
+is-active: $obj.is-active
+link: $obj.url
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header-mobile:
+ps.product-data list products: 
+optional ftd.image-src brand-site-logo:
+optional string brand-site-name:
+optional boolean parent-brand:
+fpm.toc-item list sub-sections:
+boolean pricing-cta:
+optional string brand-site-url:
+optional fpm.toc-item current-subsection: 
+optional fpm.toc-item current-section: 
+optional fpm.toc-item current-page:
+fpm.toc-item list toc:
+optional string github-url:
+width: fill
+string site-url: $site-url
+optional ftd.image-src site-logo: $site-logo
+optional string site-name: $site-name
+
+--- ftd.row:
+width: fill
+id: first-row
+background-color: $fpm.color.main.background.base
+padding-horizontal: 20
+padding-vertical: 15
+
+--- ftd.row:
+width: fill
+spacing: 25
+id: left-side
+
+--- ftd.image:
+src: $assets.files.static.hamburger.png
+width: 24
+height: auto
+$on-click$: toggle $sidebar-open
+position: center
+
+--- ftd.row:
+spacing: 10
+link: $site-url
+
+--- ftd.image:
+if: $site-logo is not null
+src: $site-logo
+width: auto
+height: 24
+position: center
+
+--- ftd.text: $site-name
+if: $site-name is not null
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+position: center
+
+--- site-link:
+if: $site-logo is null
+site-name: $site-name
+
+--- container: first-row
+
+--- ftd.row: 
+id: change
+align: center
+spacing: 32
+
+--- ftd.row:
+if: $github-url is not null
+link: $github-url
+position: right
+spacing: 30
+width: auto
+
+--- ftd.image:
+src: $assets.files.static.github-light.svg
+width: 20
+min-width: 20
+link: $github
+align: center
+
+--- container: change
+
+--- ftd.image:
+src: $assets.files.static.dark-mode.svg
+width: 20
+min-width: 20
+$on-click$: message-host enable-light-mode
+align: center
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+if: $current-section.title is not null
+background-color: $fpm.color.main.background.step-1
+id: bottom-row
+
+--- ftd.row:
+width: auto
+
+--- ftd.text: $current-section.title
+if: $current-section.title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+link: $current-section.url
+background-color: $fpm.color.main.background.base
+padding-vertical: 8
+padding-horizontal: 8
+width: fill
+white-space: nowrap
+
+--- container: bottom-row
+
+--- ftd.row:
+width: fill
+spacing: 8
+padding-top: 8
+overflow-x: auto
+
+--- header-item-mobile-view: $obj.title
+$loop$: $sub-sections as $obj
+children: $obj.children 
+link: $obj.url
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+if: $current-section.title is not null
+background-color: $fpm.color.main.background.step-2
+id: bottom-row
+padding-horizontal: $fpm.space.space-5
+$on-click$: toggle $show-section 
+/$on-click-outside$: $show-section = false
+
+--- ftd.row:
+width: fill
+padding-vertical: $fpm.space.space-4
+spacing: 4
+id: selection-container
+
+--- ftd.text: $current-subsection.title
+if: $current-subsection.title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+link: $current-subsection.url
+white-space: nowrap
+
+--- ftd.row:
+if: $current-subsection.title is not null
+
+--- ftd.row:
+if: $current-page.title is not null
+
+--- ftd.text: ->
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+white-space: nowrap
+
+--- container: selection-container
+
+--- ftd.text: $current-page.title 
+if:  $current-page.title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text-strong
+link: $current-page.url 
+white-space: nowrap
+
+--- container: bottom-row
+
+--- ftd.row:
+align: right
+padding-vertical: $fpm.space.space-5
+
+--- ftd.image: 
+if: not $show-section 
+src: $assets.files.static.down-arrow.svg
+height: auto
+width: 12
+align: center
+
+--- ftd.image: 
+if:  $show-section 
+src: $assets.files.static.up-arrow.svg
+height: auto
+width: 12
+
+--- container: bottom-row
+
+--- ftd.column: 
+id: items-container
+if :$show-section
+width: fill
+anchor: parent
+background-color: $fpm.color.main.background.step-2
+top: 32
+left:0
+z-index: 999
+
+--- ftd.column:
+width: fill
+spacing: 8
+padding-vertical: 12
+padding-horizontal: 24
+overflow-x: auto
+
+--- header-toc-item-mobile-view: $obj.title
+$loop$: $toc as $obj
+children: $obj.children 
+link: $obj.url
+is-active: $obj.is-active
+
+
+
+
+
+
+
+
+
+
+-- ftd.column menu-mobile:
+ftd.color bg-color:
+ftd.color bg-hover: 
+ftd.color text-color: 
+optional string login-btn-txt:
+optional string sign-in-txt:
+ps.product-data list products:
+fpm.toc-item list footer-nav:
+optional ftd.image-src site-logo:
+string site-url: 
+boolean login-button:
+optional string brand-caption:
+optional string site-name:
+boolean parent-brand: 
+fpm.toc-item list footer-nav:
+fpm.toc-item list toc-obj:
+sticky: true
+height: calc 100vh - 0px
+overflow-y: auto
+width: calc 100% - 48px
+align: top-left
+padding-left: 10
+padding-top: 15
+padding-right: 20
+padding-bottom: 40
+border-right: 1
+anchor: window
+left: 0
+top: 0
+background-color: $fpm.color.main.background.step-1
+z-index: 4
+
+--- ftd.row:
+width: fill
+id: first-container
+
+--- ftd.column:
+width: fill
+border-bottom: 2
+border-color: $fpm.color.main.background.base
+id: logo-container
+padding-bottom: $fpm.space.space-6
+
+--- ftd.column:
+if: not $parent-brand
+
+--- ftd.text: $brand-caption
+role: $fpm.type.fine-print
+color: $fpm.color.main.text-strong
+padding-bottom: $fpm.space.space-2
+
+--- ftd.image:
+src: $site-logo
+
+--- container: logo-container
+
+--- ftd.row:
+padding-top: $fpm.space.space-4
+
+--- ps.switcher:
+products: $products
+bg-color: $bg-color
+text-color: $text-color
+
+--- container:  ftd.main
+
+--- ftd.column:
+if: $toc-obj is not empty
+width: fill
+padding-bottom: 24
+padding-top: 24
+
+--- toc-instance:
+$loop$: $toc-obj as $obj
+toc: $obj
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+padding-vertical: $fpm.space.space-6
+if: not $parent-brand
+
+--- footer:
+url: $obj.url
+title: $obj.title
+$loop$: $footer-list as $obj
+
+
+
+
+
+
+
+
+
+
+-- ftd.column mobile-sidebar:
+ftd.color base-color: 
+if: $sidebar-open
+anchor: window
+top: 0
+bottom: 0
+left: 0
+right: 0
+background-color: $base-color
+z-index: 1
+$on-click$: toggle $sidebar-open
+
+
+
+
+
+
+
+
+
+
+-- ftd.row site-link:
+optional string site-name: 
+
+--- ftd.text: LOGO
+if: $site-name is null
+move-left: 2
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+align: center
+white-space: nowrap
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-link: 
+caption title:
+boolean is-active:
+optional string link:
+
+--- ftd.text: $title
+if: $link is null 
+role:$fpm.type.copy-tight
+style: bold
+color: $fpm.color.main.text-strong
+border-bottom: 2
+padding-bottom: 4
+border-color: $fpm.color.main.background.base
+border-color if $is-active: $fpm.color.main.text
+color if $is-active: $fpm.color.main.text
+align: center
+margin-left: 20
+white-space: nowrap
+
+--- ftd.text: $title
+if: $link is not null 
+link: $link
+border-bottom: 2
+padding-bottom: 4
+role:$fpm.type.copy-tight
+style: bold
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.background.base
+border-color if $is-active: $fpm.color.main.text
+color if $is-active: $fpm.color.main.text
+link: $link
+align: center
+margin-left: 20
+white-space: nowrap
+
+
+
+
+
+
+
+
+
+
+-- ftd.column toc-instance:
+fpm.toc-item toc:
+padding-top: 2
+padding-bottom: 2
+width: fill
+
+--- ftd.text:
+if: $toc.url is not null
+link: $toc.url
+text: $toc.title
+role:$fpm.type.label-small
+style: bold
+min-width: fit-content
+margin-bottom: $fpm.space.space-4
+color: $fpm.color.main.text-strong
+color if $toc.is-active: $fpm.color.main.text
+padding-bottom: $fpm.space.space-3
+border-bottom: 2
+border-color: $fpm.color.main.background.step-1
+border-color if $toc.is-active: $fpm.color.main.background.base
+
+--- ftd.text:
+if: $toc.url is null
+text: $toc.title
+role:$fpm.type.label-small
+style: bold
+min-width: fit-content
+margin-bottom: $fpm.space.space-4
+color: $fpm.color.main.text-strong
+color if $toc.is-active: $fpm.color.main.text
+border-color: $fpm.color.main.background.step-1
+border-color if $toc.is-active: $fpm.color.main.background.base
+padding-left: $fpm.space.space-3
+
+
+
+
+
+
+
+
+
+
+-- ftd.row login-signup:
+optional string login:
+optional string sign-in: 
+ftd.image-src icon-github: $assets.files.static.icon-github.svg
+width: fill
+
+--- login-signup-desktop:
+if: not $is-mobile
+login: $login
+sign-in: $sign-in
+icon-github: $icon-github
+
+--- login-signup-mobile:
+if: $is-mobile
+login: $login
+sign-in: $sign-in
+icon-github: $icon-github
+
+-- ftd.row login-signup-desktop:
+optional string login:
+optional string sign-in: 
+optional ftd.image-src icon-github:
+spacing: 20
+margin-top: -10
+width: fill
+
+--- ftd.row:
+width: fill
+border-left: 1
+padding-left: $fpm.space.space-5
+margin-left: $fpm.space.space-5
+border-color: $fpm.color.main.border
+
+--- ftd.text: $login
+role:$fpm.type.label-small
+style: bold
+color: $fpm.color.main.cta-primary.base
+padding-vertical: 10
+link: https://cdoc.fifthtry.com/initiate-github-login/
+
+--- container: ftd.main
+
+--- github-button:
+sign-in: $sign-in
+icon-github: $icon-github
+
+
+
+
+
+
+
+
+
+
+-- ftd.column login-signup-mobile:
+optional string login:
+optional string sign-in: 
+optional ftd.image-src icon-github: $assets.files.static.icon-github.svg 
+spacing: 32
+width: fill
+
+--- ftd.text: $login
+role:$fpm.type.label-small
+style: bold
+color: $fpm.color.main.cta-primary.base
+link: https://cdoc.fifthtry.com/initiate-github-login/
+padding-bottom :32
+
+--- container: ftd.main
+
+--- github-button:
+sign-in: $sign-in
+icon-github: $icon-github
+
+
+
+
+
+
+
+
+
+
+-- ftd.row github-button:
+optional string sign-in: 
+optional string github-cta:
+optional string width:
+ftd.image-src icon-github: $assets.files.static.icon-github.svg 
+string link: https://github.com/apps/continuous-documentation
+border-radius: 4
+width: $width
+spacing: 4
+cursor: pointer
+link: $link
+margin-top: -4
+align if not $is-mobile: center
+spacing: 20
+
+--- ftd.text:
+if: $sign-in is not null
+text: $sign-in
+white-space: nowrap
+role:$fpm.type.label-small
+style: bold
+align: center
+text-align: center
+color: $fpm.color.main.background.step-1
+
+--- container: ftd.main
+
+--- ftd.image:
+src: $icon-github
+height: 16
+width: auto
+
+
+
+
+
+
+
+
+
+
+-- ftd.row pricing-cta-text:
+caption title:
+padding-horizontal: $fpm.space.space-2
+padding-vertical: $fpm.space.space-2
+background-color: $fpm.color.main.cta-primary.base
+border-radius: $fpm.space.space-2
+margin-left: $fpm.space.space-5
+margin-top: -6
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+style: bold
+white-space: nowrap
+color: $fpm.color.main.cta-primary.text
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header-item-mobile-view: 
+caption title:
+optional string link:
+fpm.toc-item list children:
+boolean open: false
+$on-click$: toggle $open
+$on-click-outside$: $open = false
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+link: $link
+white-space: nowrap
+padding-left: 10
+color: $fpm.color.main.text-strong
+margin-left: 10
+
+--- ftd.text: $title
+if: $link is null
+role: $fpm.type.fine-print
+/white-space: nowrap
+padding-left: 10
+color: $fpm.color.main.text-strong
+margin-left: 20
+cursor: auto
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header-toc-item-mobile-view: 
+caption title:
+optional string link:
+boolean is-active: 
+fpm.toc-item list children:
+boolean open: false
+$on-click$: toggle $open
+$on-click-outside$: $open = false
+
+
+--- ftd.text: $title
+if: $link is not null
+role: $fpm.type.fine-print
+style: bold
+link: $link
+white-space: nowrap
+padding-bottom: 4
+color: $fpm.color.main.text-strong
+color if $is-active: $fpm.color.main.text
+border-color: $fpm.color.main.background.step-2
+border-color if $is-active: $fpm.color.main.text
+border-bottom: 2
+margin-bottom if not $is-active: 4
+margin-bottom if $is-active: 8
+
+--- container: ftd.main
+
+--- ftd.text: $title
+if: $link is null
+role: $fpm.type.fine-print
+style: bold
+white-space: nowrap
+padding-bottom: 4
+border-bottom:2
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.background.step-2
+border-color if $is-active: $fpm.color.main.text
+color if $is-active: $fpm.color.main.text
+color if $is-active: $fpm.color.main.text
+margin-bottom if not $is-active: 4
+margin-bottom if  $is-active: 8
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $children is not empty
+padding-left:4
+
+--- header-toc-item-mobile-view: 
+title: $obj.title
+$loop$: $children as $obj
+children: $obj.children 
+link: $obj.url
+is-active: $obj.is-active
+
+
+
+
+
+-- ftd.column footer:
+caption title:
+optional string url:
+width: fill
+
+--- ftd.text: $title
+if: $url is null
+role:$fpm.type.label-small
+style: bold
+color: $fpm.color.main.text
+padding-bottom: 32
+
+--- ftd.text: $title
+if: $url is not null
+role:$fpm.type.label-small
+style: bold
+link: $url
+color: $fpm.color.main.text
+padding-bottom: 32
+
+
+
+
+
+
+-- fpm.toc-item list footer-list:
+$processor$: toc
+
+- legal: /legal/
+- support: /support/
+- feedback: /feedback/
