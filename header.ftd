@@ -820,7 +820,7 @@ padding-left: $fpm.space.space-3
 -- ftd.row login-signup:
 optional string login:
 optional string sign-in: 
-ftd.image-src icon-github: $assets.files.static.icon-github.svg
+ftd.image-src icon-github: $assets.files.static.github-light.svg
 width: fill
 
 --- login-signup-desktop:
@@ -875,7 +875,7 @@ icon-github: $icon-github
 -- ftd.column login-signup-mobile:
 optional string login:
 optional string sign-in: 
-optional ftd.image-src icon-github: $assets.files.static.icon-github.svg 
+optional ftd.image-src icon-github: $assets.files.static.github-light.svg 
 spacing: 32
 width: fill
 
@@ -905,7 +905,7 @@ icon-github: $icon-github
 optional string sign-in: 
 optional string github-cta:
 optional string width:
-ftd.image-src icon-github: $assets.files.static.icon-github.svg 
+ftd.image-src icon-github: $assets.files.static.github-light.svg 
 string link: https://github.com/apps/continuous-documentation
 border-radius: 4
 width: $width
