@@ -1203,7 +1203,7 @@ padding-top: 10
 padding-left: 20
 padding-bottom: 10
 padding-right: 20
-background-color: $fpm.color.main.cta-secondary.base
+background-color: $fpm.color.main.background.code
 border-top-radius if $caption is null: 4
 border-bottom-radius: 4
 border-width: 1
@@ -1221,7 +1221,7 @@ padding-top: 10
 padding-left: 20
 padding-bottom: 10
 padding-right: 20
-background-color: $fpm.color.main.text
+background-color: $fpm.color.main.background.code
 border-top-radius if $caption is null: 4
 border-bottom-radius if $caption is null: 4
 border-color: $fpm.color.main.background.step-1
