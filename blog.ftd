@@ -1,0 +1,25 @@
+-- import: fifthtry.github.io/Blue-Sapphire-Theme as ft
+
+-- ft.images list images-list:
+
+-- images-list: 
+src: $assets.files.static.logo-osi.png
+url: NA
+
+-- images-list: 
+src: $assets.files.static.logo-ycom-square.png
+url: NA
+
+
+
+
+
+
+
+
+
+
+-- ft.page: Hightlight
+
+-- ft.powered: Lorem Lipsum
+image-list: $images-list

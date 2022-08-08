@@ -423,7 +423,7 @@ text: $toc.title
 role: $fpm.type.fine-print
 style: bold
 min-width: fit-content
-margin-bottom: $fpm.space.space-4
+margin-bottom: $fpm.space.space-2
 text-indent: 30
 color: $fpm.color.main.text
 border-bottom: 2
@@ -435,7 +435,7 @@ text: $toc.title
 text-indent: 30
 role: $fpm.type.fine-print
 min-width: fit-content
-margin-bottom: $fpm.space.space-4
+margin-bottom: $fpm.space.space-2
 style: bold
 color: $fpm.color.main.text
 padding-left: 10
@@ -466,10 +466,10 @@ link: $toc.url
 text: $toc.title
 padding-top: 3
 padding-bottom: 3
-text-indent: 30
+margin-left: 30
+margin-bottom: $fpm.space.space-1
 role: $fpm.type.fine-print
 min-width: fit-content
-margin-bottom: $fpm.space.space-3
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 border-bottom if $toc.is-active: 2
@@ -479,12 +479,14 @@ border-color if $toc.is-active: $fpm.color.main.background.base
 if: $toc.url is null
 text: $toc.title
 min-width: fit-content
-margin-bottom: $fpm.space.space-3
+padding-left: 30
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 padding-top: 3
-text-indent: 30
+margin-left: 30
+padding-left: 30
 padding-bottom: 3
+margin-bottom: $fpm.space.space-1
 role: $fpm.type.fine-print
 border-bottom if $toc.is-active: 2
 border-color if $toc.is-active: $fpm.color.main.background.base
@@ -513,10 +515,10 @@ link: $toc.url
 text: $toc.title
 padding-top: 3
 padding-bottom: 3
-text-indent: 50
+margin-left: 50
 role: $fpm.type.fine-print
 min-width: fit-content
-margin-bottom: $fpm.space.space-3
+margin-bottom: $fpm.space.space-1
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 border-bottom if $toc.is-active: 2
@@ -526,7 +528,8 @@ border-color if $toc.is-active: $fpm.color.main.background.base
 if: $toc.url is null
 text: $toc.title
 min-width: fit-content
-margin-bottom: $fpm.space.space-3
+margin-left: 50
+margin-bottom: $fpm.space.space-1
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 padding-top: 3
@@ -1477,15 +1480,14 @@ role: $fpm.type.label-big
 --- ftd.text: $title
 if: $title is not null
 padding-top: 2
-role. $fpm.type.label-big
+role: $fpm.type.label-big
 
 --- container: tip-container
 
 --- ftd.text:
 if: $body is not null
 role: $fpm.type.copy-large
-
-$body
+text: $body
 
 
 
@@ -2746,6 +2748,7 @@ string subtitle:
 body body:
 ftd.image-src src:
 width: fill
+height: 287
 
 --- ftd.column:
 id: switch
@@ -2896,7 +2899,7 @@ shadow-size: 2
 shadow-blur: 38
 shadow-color: $fpm.color.main.background.base
 width: percent 50
-height: 290
+height: 287
 z-index: 99
 
 --- ftd.row:
@@ -2907,6 +2910,8 @@ width: fill
 align: center
 spacing: 12
 id: switch
+width: fill
+
 
 --- ftd.text: $title
 role: $fpm.type.label-big
@@ -3061,7 +3066,7 @@ shadow-size: 2
 shadow-blur: 38
 shadow-color: $fpm.color.main.background.base
 width: percent 50
-height: 290
+height: 287
 z-index: 99
 
 --- ftd.row:
