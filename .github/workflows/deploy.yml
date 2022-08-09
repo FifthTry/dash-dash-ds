@@ -25,7 +25,7 @@ jobs:
         continue-on-error: false
         run: |
           echo "Using '$CI_REPOSITORY_NAME_SLUG/' as the base while building"
-          fpm build --base=/Blue-Sapphire-Theme/
+          fpm build --base=/dash-dash-theme/
       - uses: actions/upload-artifact@master
         with:
           name: GH_PAGES_BUILD
