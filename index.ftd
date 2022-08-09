@@ -276,14 +276,17 @@ padding-top: 48
 --- ftd.column:
 id: main-container
 max-width if $widthfill: fill
-min-height: calc 100vh - 0px
 max-width if $toc is empty: 1104
 max-width if $widthfill: fill
 max-width: 800
 min-width: 800
 align if $toc is empty: center
 align: top
-min-height: calc 100vh
+height: fill
+min-height : calc 100vh - 271px
+min-height if $current-section is not null: calc 100vh - 332px
+min-height if $current-subsection is not null: calc 100vh - 360px
+min-height if $current-page is not null: calc 100vh - 360px
 padding-horizontal if not $widthfill: 34
 padding-vertical if not $widthfill: 25
 padding-horizontal if  $widthfill: 34
@@ -1527,7 +1530,7 @@ if: not $open
 src: $side-logo
 height: 89
 width: 27
-move-down: 400
+move-down: 320
 $on-click$: $open= true
 
 --- container:  ftd.main

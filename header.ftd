@@ -240,6 +240,11 @@ id: action-container
 $loop$: $sections as $obj
 link: $obj.url
 is-active: $obj.is-active
+border: $fpm.color.main.background.base
+border-active: $fpm.color.main.text
+text: $fpm.color.main.text-strong
+text-active: $fpm.color.main.text
+
 
 --- pricing-cta-text: Try for Free
 if: $pricing-cta
@@ -310,7 +315,7 @@ role: $fpm.type.heading-small
 style: bold
 color: $fpm.color.main.text-strong
 link: $current-section.url
-padding-bottom: $fpm.space.space-2
+padding-bottom if $current-subsection.title is not null: $fpm.space.space-2
 
 --- ftd.row:
 width: fill
@@ -353,8 +358,8 @@ id: left-side
 width: fill
 align: right
 padding-vertical if $sub-sections is not empty: 15
-margin-top if $current-subsection.title is not null: 24
-margin-top if $current-subsection.title is null: 8
+margin-top if $current-subsection.title is not null: 18
+margin-top if $current-section.title is not null: $fpm.space.space-1
 
 --- ftd.row:
 width: auto
@@ -364,6 +369,10 @@ align: right
 $loop$: $sub-sections as $obj
 is-active: $obj.is-active
 link: $obj.url
+border: $fpm.color.main.background.step-1
+border-active: $fpm.color.main.text
+text: $fpm.color.main.text-strong
+text-active: $fpm.color.main.text
 
 
 
@@ -736,16 +745,20 @@ white-space: nowrap
 caption title:
 boolean is-active:
 optional string link:
+ftd.color border: $fpm.color.main.background.base
+ftd.color border-active: $fpm.color.main.text
+ftd.color text: $fpm.color.main.text-strong
+ftd.color text-active: $fpm.color.main.text
 
 --- ftd.text: $title
 if: $link is null 
 role:$fpm.type.copy-tight
-color: $fpm.color.main.text-strong
+color: $text
 border-bottom: 2
 padding-bottom: 4
-border-color: $fpm.color.main.background.base
-border-color if $is-active: $fpm.color.main.text
-color if $is-active: $fpm.color.main.text
+border-color: $border
+border-color if $is-active: $border-active
+color if $is-active: $text-active
 align: center
 margin-left: 20
 white-space: nowrap
@@ -756,10 +769,10 @@ link: $link
 border-bottom: 2
 padding-bottom: 4
 role:$fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.background.base
-border-color if $is-active: $fpm.color.main.text
-color if $is-active: $fpm.color.main.text
+color: $text
+border-color: $border
+border-color if $is-active: $border-active
+color if $is-active: $text-active
 link: $link
 align: center
 margin-left: 20
