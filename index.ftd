@@ -1,8 +1,8 @@
 -- import: fpm
 -- import: fifthtry.github.io/lato/assets as lato
--- import: fifthtry.github.io/dash-dash-Theme/assets
+-- import: fifthtry.github.io/dash-dash-theme/assets
 -- import: fifthtry.github.io/product-switcher as ps
--- import: fifthtry.github.io/dash-dash-Theme/header as h
+-- import: fifthtry.github.io/dash-dash-theme/header as h
 
 -- optional string copyright: © 2022 FifthTry. All rights reserved
 
