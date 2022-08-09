@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/Blue-Sapphire-Theme as ft
+-- import: fifthtry.github.io/dash-dash-Theme as ft
 
 
 -- ft.page:
@@ -6,7 +6,7 @@
 -- ft.post-single-intro:
 poster: $assets.files.static.picture1.jpeg
 post-title: Lorem ipsum dolor sit amet
-avatar: $assets.files.static.avatar.jpg
+avatar: $assets.files.static.avatar.svg
 username: John Deo
 user-profile-link: https://in.linkedin.com/in/
 post-category: News & Announcements

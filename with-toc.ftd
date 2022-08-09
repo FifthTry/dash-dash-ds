@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/Blue-Sapphire-Theme as ft
+-- import: fifthtry.github.io/dash-dash-Theme as ft
 
 -- ft.featured list feature-list:
 
@@ -117,21 +117,21 @@ feature-list: $feature-list
 
 --- ft.slide-one: Lorem ipsum 
 subtitle: Lorem ipsum 
-src: $assets.files.static.slide-show-image-1.png
+src: $assets.files.static.slide-show-image-1.svg
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 incididunt ut labore et dolore magna aliqua .
 
 --- ft.slide-two: Lorem ipsum 
 subtitle: Lorem ipsum 
-src: $assets.files.static.slide-show-image-2.png
+src: $assets.files.static.slide-show-image-2.svg
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 incididunt ut labore et dolore magna aliqua. 
 
 --- ft.slide-three: Lorem ipsum 
 subtitle: Lorem ipsum 
-src: $assets.files.static.group.jpg
+src: $assets.files.static.group.svg
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 incididunt ut labore et dolore magna aliqua.

@@ -1,8 +1,8 @@
 -- import: fpm
 -- import: fifthtry.github.io/lato/assets as lato
--- import: fifthtry.github.io/Blue-Sapphire-Theme/assets
+-- import: fifthtry.github.io/dash-dash-Theme/assets
 -- import: fifthtry.github.io/product-switcher as ps
--- import: fifthtry.github.io/Blue-Sapphire-Theme/header as h
+-- import: fifthtry.github.io/dash-dash-Theme/header as h
 
 -- optional string copyright: © 2022 FifthTry. All rights reserved
 
@@ -116,7 +116,7 @@ fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list toc: $sitemap.toc
 ftd.image-src cross-icon:$assets.files.static.cross.svg
-ftd.image-src bg-desktop: $assets.files.static.home-desktop-light.png
+ftd.image-src bg-desktop: $assets.files.static.home-desktop-light.svg
 optional fpm.toc-item current-section: $sitemap.current-section
 optional fpm.toc-item current-subsection: $sitemap.current-subsection
 optional fpm.toc-item current-page: $sitemap.current-page
@@ -1521,6 +1521,7 @@ string about-text-url:
 string edit-text:
 string edit-text-url:
 
+
 --- ftd.image:
 if: not $open
 src: $side-logo
@@ -1535,6 +1536,7 @@ $on-click$: $open= true
 if: $open
 id: right-sidebar
 min-width: 256
+max-width: 256
 height: calc 100% - 2px
 max-height: calc percent 100 - 2px
 
@@ -1574,7 +1576,6 @@ height: 16
 --- container: section-container
 
 --- ftd.column:
-width: fill
 height: fill
 overflow-y: auto
 
@@ -1592,7 +1593,9 @@ width: fill
 spacing: 16
 
 --- ftd.image:
-src: $assets.files.static.avatar.svg
+src: $assets.files.static.profile-image.svg
+width: 48
+border-radius: 100
 
 --- ftd.text: $github-text
 link: $github-text-url
@@ -1676,7 +1679,8 @@ background-color: $fpm.color.main.text-strong
 
 -- ftd.text green: text
 role: $fpm.type.copy-tight
-color: $fpm.color.main.text
+color: $fpm.color.main.cta-primary.base
+style: bold
 
 
 
