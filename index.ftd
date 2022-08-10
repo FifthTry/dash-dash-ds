@@ -271,7 +271,7 @@ max-width if $toc is empty: 800
 max-width if $widthfill: fill
 id: main-row
 align: center
-padding-top: 48
+padding-vertical: 48
 
 --- ftd.column:
 id: main-container
@@ -283,10 +283,10 @@ min-width: 800
 align if $toc is empty: center
 align: top
 height: fill
-min-height : calc 100vh - 271px
-min-height if $current-section is not null: calc 100vh - 332px
-min-height if $current-subsection is not null: calc 100vh - 360px
-min-height if $current-page is not null: calc 100vh - 360px
+min-height : calc 100vh - 319px
+min-height if $current-section is not null: calc 100vh - 401px
+min-height if $current-subsection is not null: calc 100vh - 417px
+min-height if $current-page is not null: calc 100vh - 417px
 padding-horizontal if not $widthfill: 34
 padding-vertical if not $widthfill: 25
 padding-horizontal if  $widthfill: 34
