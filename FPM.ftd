@@ -14,7 +14,7 @@ base: https://raw.githubusercontent.com/fifthtry/dash-dash-theme/main
 
 -- fpm.sitemap:
 
-# Home: /index/
+# Home: /
 
 # With Toc: /with-toc/
 - Hightlight: /highlight/
