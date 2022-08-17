@@ -85,7 +85,7 @@ ftd.image-src src:
 -- profiles list profile:
 
 
--- ft.testimonials list testimonials-list:
+-- testimonials list testimonials-list:
 
 -- testimonials-list: Running github workflow
 image: $assets.files.static.picture1.jpeg
