@@ -85,6 +85,7 @@ ftd.image-src src:
 -- profiles list profile:
 
 
+
 -- testimonials list testimonials-list:
 
 -- testimonials-list: Running github workflow
@@ -107,7 +108,6 @@ On successful execution of workflow, the `gh-pages` branch would be created.
 
 
 
-
 -- page: Quickstart
 
 The length is how much memory, in bytes, the contents of the String is currently 
@@ -119,28 +119,22 @@ the length, and the capacity that are on the stack. We do not copy the data on
 the heap that the pointer refers to. In other words, the data representation 
 in memory.
 
+
 -- heading: Testimonial
 
 -- testimonial:
-testimonial-list: $testimonial-list
+testimonial-list: $testimonials-list
 
 
 
 
 
--- ft.heading: Testimonial
-
--- ft.testimonial:
-testimonial-list: $testimonial-list
 
 
 -- ftd.column page:
 optional caption title:
 optional body body:
-boolean pricing-cta:-- ft.heading: Testimonial
-
--- ft.testimonial:
-testimonial-list: $testimonial-list $pricing-cta
+boolean pricing-cta: $pricing-cta
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list toc: $sitemap.toc
