@@ -85,6 +85,26 @@ ftd.image-src src:
 -- profiles list profile:
 
 
+-- ft.testimonials list testimonials-list:
+
+-- testimonials-list: Running github workflow
+image: $assets.files.static.picture1.jpeg
+designation: software
+
+On successful execution of workflow, the `gh-pages` branch would be created.
+
+-- testimonials-list: Running github workflow
+image: $assets.files.static.picture1.jpeg
+designation: software
+
+On successful execution of workflow, the `gh-pages` branch would be created.
+
+-- testimonials-list: Running github workflow
+image: $assets.files.static.picture1.jpeg
+designation: software
+
+On successful execution of workflow, the `gh-pages` branch would be created.
+
 
 
 
@@ -99,19 +119,28 @@ the length, and the capacity that are on the stack. We do not copy the data on
 the heap that the pointer refers to. In other words, the data representation 
 in memory.
 
+-- heading: Testimonial
+
+-- testimonial:
+testimonial-list: $testimonial-list
 
 
 
 
 
+-- ft.heading: Testimonial
 
-
+-- ft.testimonial:
+testimonial-list: $testimonial-list
 
 
 -- ftd.column page:
 optional caption title:
 optional body body:
-boolean pricing-cta: $pricing-cta
+boolean pricing-cta:-- ft.heading: Testimonial
+
+-- ft.testimonial:
+testimonial-list: $testimonial-list $pricing-cta
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list toc: $sitemap.toc
@@ -240,9 +269,7 @@ boolean pricing-cta:
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
-boolean pricing-cta:
-width: fill
-boolean widthfill: 
+width: fill 
 append-at: main-container
 open: true
 
@@ -482,7 +509,6 @@ border-color if $toc.is-active: $fpm.color.main.background.base
 if: $toc.url is null
 text: $toc.title
 min-width: fit-content
-padding-left: 30
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 padding-top: 3
@@ -697,9 +723,7 @@ padding-bottom: 12
 
 --- ftd.text:
 text: $title
-caption $title:
 region: title
-text: $title
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
@@ -1308,9 +1332,7 @@ append-at: inner
 
 --- ftd.text:
 text: $title
-caption $title:
 region: title
-text: $title
 role: $fpm.type.heading-medium
 color: $fpm.color.main.text
 padding-bottom: 8
@@ -1516,7 +1538,6 @@ string github-text:
 boolean open: false
 z-index: 1000
 string github-text-url: 
-ftd.image-src side-logo: 
 ftd.image-src sidebar-brand-logo: 
 ftd.image-src cross-icon:
 string about-text: 
@@ -2039,7 +2060,6 @@ align: center
 width: fill
 role: $fpm.type.heading-small
 style: semi-bold
-width: fill
 text-align: center
 
 --- ftd.text: $designation
@@ -2051,7 +2071,6 @@ text-align: center
 text: $body
 width: fill
 role: $fpm.type.fine-print
-width: fill
 text-align: center
 
 
@@ -2627,14 +2646,12 @@ align: center
 --- ftd.text: $title
 width: fill
 role: $fpm.type.copy-large
-width: fill
 text-align: center
 
 --- ftd.text:
 text: $body
 width: fill
 role: $fpm.type.copy-tight
-width: fill
 text-align: center
 
 
