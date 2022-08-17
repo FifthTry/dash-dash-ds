@@ -35,8 +35,6 @@ if: $ftd.device == mobile
 
 -- ftd.column header:
 ftd.color shadow-color: $fpm.color.main.text-strong
-optional string brand-caption:
-optional string site-name:
 fpm.toc-item list footer-nav: $footer-list
 optional ftd.image-src brand-site-logo:
 optional string brand-site-name:
@@ -617,7 +615,6 @@ boolean login-button:
 optional string brand-caption:
 optional string site-name:
 boolean parent-brand: 
-fpm.toc-item list footer-nav:
 fpm.toc-item list toc-obj:
 sticky: true
 height: calc 100vh - 0px
@@ -765,7 +762,6 @@ white-space: nowrap
 
 --- ftd.text: $title
 if: $link is not null 
-link: $link
 border-bottom: 2
 padding-bottom: 4
 role:$fpm.type.copy-tight
@@ -922,7 +918,6 @@ ftd.image-src icon-github: $assets.files.static.github-light.svg
 string link: https://github.com/apps/continuous-documentation
 border-radius: 4
 width: $width
-spacing: 4
 cursor: pointer
 link: $link
 margin-top: -4
