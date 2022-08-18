@@ -1,12 +1,10 @@
--- import: fifthtry.github.io/dash-dash-theme as ft
+-- import: fifthtry.github.io/dash-dash-ds as ft
 
 
 
 
 
 -- ft.page: Hightlight
-
--- ft.highlight: How to use ftd
 
 The length is how much memory, in bytes, the contents of the String is currently
  using. The capacity is the total amount of {highlight: memory}, in bytes, that the String 

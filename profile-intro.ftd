@@ -1,17 +1,7 @@
--- import: fifthtry.github.io/dash-dash-theme as ft
+-- import: fifthtry.github.io/dash-dash-ds as ft
 
 
--- ft.page:
-
--- ft.post-single-intro:
-poster: $assets.files.static.picture1.jpeg
-post-title: Lorem ipsum dolor sit amet
-avatar: $assets.files.static.avatar.svg
-username: John Deo
-user-profile-link: https://in.linkedin.com/in/
-post-category: News & Announcements
-post-category-link: /
-timestamp: March 15, 2022
+-- ft.page: Blog post title
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 tempor incididunt ut labore et dolore magna aliqua. Purus non enim 

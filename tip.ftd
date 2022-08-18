@@ -1,4 +1,5 @@
--- import: fifthtry.github.io/dash-dash-theme as ft
+-- import: fifthtry.github.io/dash-dash-ds as ft
+-- import: cbox
 
 
 
@@ -8,7 +9,10 @@
 
 -- ft.page: Tip
 
+Example of tip using `fifthtry.github.io/admonitions` package.
 
--- ft.tip: Running 
 
-On successful execution of workflow, the `gh-pages` branch would be created.
+-- cbox.tip: Tip Heading
+
+Of all the things possible, this is what you came up with? I am disappointed in
+your lack of ingenuity.

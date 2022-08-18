@@ -1,7 +1,6 @@
--- import: fifthtry.github.io/blue-sapphire-cs as blue-sapphire-cs
 -- import: fifthtry.github.io/lato/assets as lato-assets
 -- import: fpm
-
+-- import: black-cs
 -- fpm.font-copy: $lato-assets.fonts.Lato
 
 -- fpm.font-display: $lato-assets.fonts.Lato

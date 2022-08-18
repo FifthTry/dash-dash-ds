@@ -6,11 +6,15 @@ base: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 
 
 -- fpm.dependency: fifthtry.github.io/lato as lato
--- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
 -- fpm.dependency: fifthtry.github.io/dash-dash-ds/header 
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
--- fpm.dependency: fifthtry.github.io/blue-sapphire-cs as blue-sapphire-cs
+-- fpm.dependency: fifthtry.github.io/color-doc as black-cs
+-- fpm.dependency: fifthtry.github.io/admonitions as cbox
+
+-- fpm.auto-import: cbox
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config
+-- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
+-- fpm.auto-import: black-cs
 
 -- fpm.sitemap:
 

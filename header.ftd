@@ -1,13 +1,13 @@
 -- import: fifthtry.github.io/product-switcher as ps
 -- import: fpm
 -- import: fifthtry.github.io/lato/assets as lato
--- import: fifthtry.github.io/dash-dash-theme/assets
+-- import: fifthtry.github.io/dash-dash-ds/assets
 
 -- fpm.toc-item list empty-toc:
 
 -- boolean show-section: false
 
--- string github: NA
+-- string github: /
 
 -- optional string site-name:
 
@@ -15,7 +15,7 @@
 dark: $assets.files.static.site-icon.png.dark
 light:  $assets.files.static.site-icon.png.light
 
--- string site-url: NA
+-- string site-url: /
 
 -- boolean sidebar-open: false
 

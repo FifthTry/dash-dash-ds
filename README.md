@@ -1,4 +1,4 @@
 # book-theme
 
-# Blue Sapphire
+# Dash Dash Documentation Site Theme
  

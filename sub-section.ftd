@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/dash-dash-theme as ft
+-- import: fifthtry.github.io/dash-dash-ds as ft
 
 
 
@@ -12,6 +12,16 @@
 
 -- ft.page: 
 
--- ft.h1: Heading
+-- ft.h1: Heading level 1
+
+On successful execution of workflow, the `gh-pages` branch would be created.
+
+
+-- ft.h2: Heading level 2
+
+On successful execution of workflow, the `gh-pages` branch would be created.
+
+
+-- ft.h3: Heading level 3
 
 On successful execution of workflow, the `gh-pages` branch would be created.

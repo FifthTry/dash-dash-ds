@@ -1,8 +1,8 @@
 -- import: fpm
 -- import: fifthtry.github.io/lato/assets as lato
--- import: fifthtry.github.io/dash-dash-theme/assets
+-- import: fifthtry.github.io/dash-dash-ds/assets
 -- import: fifthtry.github.io/product-switcher as ps
--- import: fifthtry.github.io/dash-dash-theme/header as h
+-- import: fifthtry.github.io/dash-dash-ds/header as h
 
 -- optional string copyright: © 2022 FifthTry. All rights reserved
 
@@ -120,10 +120,7 @@ the heap that the pointer refers to. In other words, the data representation
 in memory.
 
 
--- heading: Testimonial
 
--- testimonial:
-testimonial-list: $testimonials-list
 
 
 
@@ -139,7 +136,7 @@ fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list toc: $sitemap.toc
 ftd.image-src cross-icon:$assets.files.static.cross.svg
-ftd.image-src bg-desktop: $assets.files.static.home-desktop-light.svg
+ftd.image-src bg-desktop: $assets.files.static.home-desktop.png
 optional fpm.toc-item current-section: $sitemap.current-section
 optional fpm.toc-item current-subsection: $sitemap.current-subsection
 optional fpm.toc-item current-page: $sitemap.current-page
@@ -366,7 +363,7 @@ optional fpm.toc-item current-section:
 optional fpm.toc-item current-subsection: 
 optional fpm.toc-item current-page:
 optional ftd.color mobile-sidebar-base:
-ftd.image-src bg-mobile: $assets.files.static.home-mobile-light.png
+ftd.image-src bg-mobile: $assets.files.static.home-mobile.png
 width: fill
 append-at: main-container
 open: true
@@ -448,23 +445,26 @@ role: $fpm.type.fine-print
 style: bold
 min-width: fit-content
 margin-bottom: $fpm.space.space-2
-text-indent: 30
+text-indent: 18
 color: $fpm.color.main.text
-border-bottom: 2
+border-bottom: 1
 border-color : $fpm.color.main.background.base
+padding-right: $fpm.space.space-3
+padding-bottom: 6
 
 --- ftd.text:
 if: $toc.url is null
 text: $toc.title
-text-indent: 30
 role: $fpm.type.fine-print
+style: bold
 min-width: fit-content
 margin-bottom: $fpm.space.space-2
-style: bold
+text-indent: 18
 color: $fpm.color.main.text
-padding-left: 10
-border-bottom: 2
-border-color: $fpm.color.main.background.base
+border-bottom: 1
+border-color : $fpm.color.main.background.base
+padding-right: $fpm.space.space-3
+padding-bottom: 6
 
 --- toc-children:
 $loop$: $toc.children as $obj
@@ -483,6 +483,7 @@ toc: $obj
 fpm.toc-item toc:
 padding-top: 2
 padding-bottom: 2
+margin-bottom: $fpm.space.space-4
 
 --- ftd.text:
 if: $toc.url is not null
@@ -490,14 +491,14 @@ link: $toc.url
 text: $toc.title
 padding-top: 3
 padding-bottom: 3
-margin-left: 30
+margin-left: 20
 margin-bottom: $fpm.space.space-1
 role: $fpm.type.fine-print
 min-width: fit-content
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
-border-bottom if $toc.is-active: 2
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-bottom if $toc.is-active: 1
+border-color if $toc.is-active: $fpm.color.main.border
 
 --- ftd.text:
 if: $toc.url is null
@@ -506,13 +507,13 @@ min-width: fit-content
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 padding-top: 3
-margin-left: 30
-padding-left: 30
+margin-left: 20
+padding-left: 20
 padding-bottom: 3
 margin-bottom: $fpm.space.space-1
 role: $fpm.type.fine-print
-border-bottom if $toc.is-active: 2
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-bottom if $toc.is-active: 1
+border-color if $toc.is-active: $fpm.color.main.border
 
 --- childrens:
 $loop$: $toc.children as $obj
@@ -538,29 +539,29 @@ link: $toc.url
 text: $toc.title
 padding-top: 3
 padding-bottom: 3
-margin-left: 50
+margin-left: 30
 role: $fpm.type.fine-print
 min-width: fit-content
 margin-bottom: $fpm.space.space-1
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
-border-bottom if $toc.is-active: 2
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-bottom if $toc.is-active: 1
+border-color if $toc.is-active: $fpm.color.main.border
 
 --- ftd.text:
 if: $toc.url is null
 text: $toc.title
 min-width: fit-content
-margin-left: 50
+margin-left: 30
 margin-bottom: $fpm.space.space-1
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.text-strong
 padding-top: 3
-text-indent: 50
+text-indent: 30
 padding-bottom: 3
 role: $fpm.type.fine-print
-border-bottom if $toc.is-active: 2
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-bottom if $toc.is-active: 1
+border-color if $toc.is-active: $fpm.color.main.border
 
 
 
@@ -626,7 +627,7 @@ padding-bottom: 12
 --- ftd.row: 
 id: dash-row
 width: fill
-spacing: 7
+spacing: 16
 
 --- ftd.row:
 spacing: 8
@@ -743,7 +744,7 @@ region: h1
 --- ftd.row: 
 id: dash-row
 width: fill
-spacing: 7
+spacing: 16
 padding-bottom: 12
 
 --- ftd.row:
@@ -835,7 +836,7 @@ width: fill
 --- ftd.row: 
 id: dash-row
 width: fill
-spacing: 7
+spacing: 16
 padding-bottom: 12
 
 --- ftd.row:
@@ -928,7 +929,7 @@ padding-bottom: 12
 --- ftd.row: 
 id: dash-row
 width: fill
-spacing: 7
+spacing: 16
 
 --- ftd.row:
 spacing: 8
@@ -1879,37 +1880,6 @@ width: fill
 spacing: space-between
 
 --- ftd.row:
-id: footer-container
-width: fill
-height: 48
-
---- ftd.row:
-width: fill
-
---- ftd.row:
-link: $site-url
-
---- ftd.image:
-if: $site-logo is not null
-src: $site-logo
-width: 113
-height: 47
-width if $is-mobile: 78
-height if $is-mobile: 32
-margin-top: 8
-
---- ftd.text: $site-name
-if: $site-name is not null
-role: $fpm.type.heading-large
-color: $fpm.color.main.text-strong
-
---- site-link:
-if: $site-logo is null
-site-name: $site-name
-
---- container: footer-container
-
---- ftd.row:
 align: right
 
 --- footer-link:
@@ -2137,7 +2107,7 @@ body body:
 ftd.color backgroundcolor: $fpm.color.main.background.base
 width: fill
 background-color: $backgroundcolor
-padding-top: $fpm.space.space-15
+padding-top: $fpm.space.space-2
 
 --- post-metadata:
 post-title: $post-title
@@ -2181,7 +2151,6 @@ body body:
 ftd.color backgroundcolor:
 width: fill
 background-color: $backgroundcolor
-padding-top: $fpm.space.space-8
 
 --- post-metadata:
 post-title: $post-title
@@ -2215,18 +2184,14 @@ height: auto
 -- ftd.row post-metadata:
 string post-title:
 width: fill
-max-width: 1000
-max-height: 174
 
 --- ftd.text: $post-title
-padding-horizontal: $fpm.space.space-11
 if: not $is-mobile
 role: $fpm.type.heading-hero
 style: bold
 color: $fpm.color.main.text-strong
 
 --- ftd.text: $post-title
-padding-horizontal: $fpm.space.space-7
 if: $is-mobile
 role: $fpm.type.heading-medium
 style: bold
@@ -2287,7 +2252,6 @@ string timestamp:
 spacing: 52
 width: fill
 margin-top: $fpm.space.space-9
-padding-horizontal: $fpm.space.space-11
 
 --- ftd.row:
 id: image-text
@@ -3269,6 +3233,7 @@ spacing: 20
 
 --- ftd.text:$title
 role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
 style: bold
 
 --- markdown:

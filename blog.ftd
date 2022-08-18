@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/dash-dash-theme as ft
+-- import: fifthtry.github.io/dash-dash-ds as ft
 
 
 
@@ -12,7 +12,21 @@
 
 -- ft.page: Hightlight
 
--- ft.h3: Lorem ipsum
+-- ft.h3: Heading 3 blog post list title
+
+Lorem ipsum dolor sit amet, an ius porro denique eleifend, ne natum dolore 
+interpretaris has. Sit tantas vocibus contentiones te, est accusata definitiones 
+ad. Ne rebum facilis phaedrum quo. Doctus malorum an nam.
+
+
+-- ft.h2: Heading 2 blog post list title
+
+Lorem ipsum dolor sit amet, an ius porro denique eleifend, ne natum dolore 
+interpretaris has. Sit tantas vocibus contentiones te, est accusata definitiones 
+ad. Ne rebum facilis phaedrum quo. Doctus malorum an nam.
+
+
+-- ft.h3: Heading 3 blog post list title
 
 Lorem ipsum dolor sit amet, an ius porro denique eleifend, ne natum dolore 
 interpretaris has. Sit tantas vocibus contentiones te, est accusata definitiones 
