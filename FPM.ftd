@@ -1,16 +1,16 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/dash-dash-theme
-zip: github.com/fifthtry/dash-dash-theme/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/dash-dash-theme/main
+-- fpm.package: fifthtry.github.io/dash-dash-ds
+zip: github.com/fifthtry/dash-dash-ds/archive/refs/heads/main.zip
+base: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 
 
 -- fpm.dependency: fifthtry.github.io/lato as lato
--- fpm.auto-import: fifthtry.github.io/dash-dash-theme/assets
--- fpm.dependency: fifthtry.github.io/dash-dash-theme/header 
+-- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
+-- fpm.dependency: fifthtry.github.io/dash-dash-ds/header 
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
 -- fpm.dependency: fifthtry.github.io/blue-sapphire-cs as blue-sapphire-cs
--- fpm.auto-import: fifthtry.github.io/dash-dash-theme/FPM/config
+-- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config
 
 -- fpm.sitemap:
 
