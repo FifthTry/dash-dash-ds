@@ -5,7 +5,7 @@ zip: github.com/fifthtry/dash-dash-ds/archive/refs/heads/main.zip
 base: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 
 
--- fpm.dependency: fifthtry.github.io/lato as lato
+-- fpm.dependency: fifthtry.github.io/lato-font as lato
 -- fpm.dependency: fifthtry.github.io/dash-dash-ds/header 
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
 -- fpm.dependency: fifthtry.github.io/color-doc as black-cs
