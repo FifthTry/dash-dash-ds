@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/lato/assets as lato-assets
+-- import: fifthtry.github.io/lato-font/assets as lato-assets
 -- import: fpm
 -- import: black-cs
 -- fpm.font-copy: $lato-assets.fonts.Lato

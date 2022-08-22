@@ -1,6 +1,6 @@
 -- import: fifthtry.github.io/product-switcher as ps
 -- import: fpm
--- import: fifthtry.github.io/lato/assets as lato
+-- import: fifthtry.github.io/lato-font/assets as lato
 -- import: fifthtry.github.io/dash-dash-ds/assets
 
 -- fpm.toc-item list empty-toc:
