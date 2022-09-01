@@ -2,7 +2,7 @@
 
 -- fpm.package: fifthtry.github.io/dash-dash-ds
 zip: github.com/fifthtry/dash-dash-ds/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
+download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 
 
 -- fpm.dependency: fifthtry.github.io/lato-font as lato
