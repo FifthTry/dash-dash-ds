@@ -11,7 +11,7 @@
 
 -- optional string site-name:
 
--- optional ftd.image-src site-logo:
+-- ftd.image-src site-logo:
 dark: $assets.files.static.site-icon.png.dark
 light:  $assets.files.static.site-icon.png.light
 
@@ -190,8 +190,8 @@ link: $site-url
 --- ftd.image:
 if: $site-logo is not null
 src: $site-logo
-width: 113
-height: 47
+width: 40
+height: auto
 width if $is-mobile: 78
 height if $is-mobile: 32
 margin-top: 8
@@ -357,7 +357,7 @@ width: fill
 align: right
 padding-vertical if $sub-sections is not empty: 15
 margin-top if $current-subsection.title is not null: 18
-margin-top if $current-section.title is not null: $fpm.space.space-1
+;margin-top if $current-section.title is not null: $fpm.space.space-1
 
 --- ftd.row:
 width: auto
