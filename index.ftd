@@ -109,19 +109,19 @@ ftd.image-src src:
 -- testimonials list testimonials-list:
 
 -- testimonials-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- testimonials-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- testimonials-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
