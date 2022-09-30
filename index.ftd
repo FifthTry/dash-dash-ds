@@ -1611,27 +1611,12 @@ background-color: $fpm.color.main.background.base
 
 
 
--- ftd.column highlight: 
+-- ftd.text highlight: $title
 caption title:
-optional body body:
-width: fill
-margin-top: 32
-margin-bottom: 32
-spacing: 24
-
---- ftd.text: $title
 background-color: $fpm.color.main.custom.two
 color: $fpm.color.main.background.base
-role: $fpm.type.heading-large
-style: semi-bold
-padding: 16
+padding: 3
 border-radius: 3
-
---- ftd.text:
-if: $body is not null
-text: $body
-color: $fpm.color.main.text
-role: $fpm.type.copy-tight
 
 
 
