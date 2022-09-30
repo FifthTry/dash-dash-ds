@@ -239,7 +239,6 @@ string edit-text-url: /
 tc list tc-list: $tc-list
 optional ftd.color mobile-sidebar-base:
 boolean login-button: $login-button
-fpm.toc-item list footer-nav: $footer-nav
 fpm.toc-item list footer-toc: $footer-toc
 ps.product-data list products: $ps.product
 boolean show-floater: $show-floater
@@ -3450,12 +3449,13 @@ url: https://fifthtry.com/
 url: https://fifthtry.com/
 is-last: true
 
--- fpm.toc-item list footer-nav:
+-- fpm.toc-item list footer-toc:
 $processor$: toc
 
 - Legal: /
 - Support: /
 - Feedback: /
+
 -- fpm.toc-item list footer-toc:
 $processor$: toc
 
