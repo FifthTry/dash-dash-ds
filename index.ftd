@@ -241,7 +241,7 @@ optional ftd.color mobile-sidebar-base:
 boolean login-button: $login-button
 fpm.toc-item list footer-nav: $footer-nav
 fpm.toc-item list footer-toc: $footer-toc
-ps.product-data list products: $ps.example-product
+ps.product-data list products: $ps.product
 boolean show-floater: $show-floater
 ftd.color bg-color: $fpm.color.main.background.step-1
 ftd.color bg-hover: $fpm.color.main.background.step-2
@@ -1611,27 +1611,12 @@ background-color: $fpm.color.main.background.base
 
 
 
--- ftd.column highlight: 
+-- ftd.text highlight: $title
 caption title:
-optional body body:
-width: fill
-margin-top: 32
-margin-bottom: 32
-spacing: 24
-
---- ftd.text: $title
 background-color: $fpm.color.main.custom.two
 color: $fpm.color.main.background.base
-role: $fpm.type.heading-large
-style: semi-bold
-padding: 16
+padding: 3
 border-radius: 3
-
---- ftd.text:
-if: $body is not null
-text: $body
-color: $fpm.color.main.text
-role: $fpm.type.copy-tight
 
 
 
@@ -4048,6 +4033,7 @@ spacing: 2
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 link: $author.bio-url
+style: italic
 
 --- ftd.text: , 
 role: $fpm.type.fine-print
@@ -4352,6 +4338,7 @@ spacing: 2
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 link: $author.bio-url
+style: italic
 
 --- ftd.text:, 
 role: $fpm.type.fine-print
@@ -4702,3 +4689,43 @@ optional ftd.image-src post-image:
 optional body body:
 string post-url:
 author-meta author:
+
+
+
+
+-- ftd.text yellowmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.custom.two
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.text greenmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.success.text
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
+-- ftd.text redmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.error.text
+padding-horizontal: 2
+margin-right: 4
