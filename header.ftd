@@ -52,7 +52,7 @@ optional ftd.color active-text-color:
 optional ftd.color bg-section-color:
 optional ftd.color bg-subsection-color:
 boolean parent-brand: false
-ps.product-data list products: $ps.example-product
+ps.product-data list products: $ps.product
 boolean pricing-cta: false
 optional ftd.color mobile-sidebar-base:
 fpm.toc-item list header-toc: $empty-toc
