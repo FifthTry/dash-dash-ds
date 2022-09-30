@@ -3,36 +3,36 @@
 -- ft.featured list feature-list:
 
 -- feature-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- feature-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- feature-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- ft.testimonials list testimonial-list:
 
 -- testimonial-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- testimonial-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
 
 -- testimonial-list: Running github workflow
-image: $assets.files.static.picture1.jpeg
+image: $assets.files.static.image-placeholder.png
 designation: software
 
 On successful execution of workflow, the `gh-pages` branch would be created.
