@@ -4048,6 +4048,7 @@ spacing: 2
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 link: $author.bio-url
+style: italic
 
 --- ftd.text: , 
 role: $fpm.type.fine-print
@@ -4352,6 +4353,7 @@ spacing: 2
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 link: $author.bio-url
+style: italic
 
 --- ftd.text:, 
 role: $fpm.type.fine-print
