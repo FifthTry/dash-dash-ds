@@ -8,25 +8,47 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 -- fpm.dependency: fifthtry.github.io/lato-font as lato
 -- fpm.dependency: fifthtry.github.io/dash-dash-ds/header 
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
--- fpm.dependency: fifthtry.github.io/color-doc as black-cs
+-- fpm.dependency: fifthtry.github.io/color-doc as cs
 -- fpm.dependency: fifthtry.github.io/admonitions as cbox
+-- fpm.dependency: fifthtry.github.io/doc-site
 
 -- fpm.auto-import: cbox
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
--- fpm.auto-import: black-cs
+-- fpm.auto-import: cs
 
 -- fpm.sitemap:
 
 # Home: /
 
-# With Toc: /with-toc/
-- Hightlight: /highlight/
-  - Sub Section: /sub-section/
-    - Sub Sub Section: /sub-sub-section/
-- Blog-post:/profile-intro/
-  - Blog: /blog/
-- tip: /tip/
+- Image: /image/
+- Floater: /floater/
+
+# Docs: -/fifthtry.github.io/doc-site/documentation/docs/
+- How to use blog: -/fifthtry.github.io/doc-site/documentation/blog-docs/
 
 
+# Blog: /featured-posts/
 
+## Posts: /featured-posts/
+
+- News & Culture: /blog-articles/category-1/
+
+  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
+
+- Technology & Learning: /blog-articles/category-2/
+
+  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+  - What rust gives us?: /blog-articles/category-2/sample-post-4/
+
+## Authors: /blog-authors/amitu/
+
+- Amit Upadhyay: /blog-authors/amitu/
+- Abrar Khan: /blog-authors/abrar/
+- Arpita Jaiswal: /blog-authors/arpita/
+- Ganesh S Salunke: /blog-authors/ganesh/
+
+
+# GitHub
+url: https://github.com/FifthTry/doc-site/

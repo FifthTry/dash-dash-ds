@@ -11,7 +11,7 @@
 
 -- optional string site-name:
 
--- optional ftd.image-src site-logo:
+-- ftd.image-src site-logo:
 dark: $assets.files.static.site-icon.png.dark
 light:  $assets.files.static.site-icon.png.light
 
@@ -28,7 +28,9 @@ if: $ftd.device == mobile
 
 
 
-
+-- ftd.color light-white:
+light: #DDDDDD
+dark: #DDDDDD
 
 
 
@@ -190,8 +192,8 @@ link: $site-url
 --- ftd.image:
 if: $site-logo is not null
 src: $site-logo
-width: 113
-height: 47
+width: 40
+height: auto
 width if $is-mobile: 78
 height if $is-mobile: 32
 margin-top: 8
@@ -239,9 +241,9 @@ $loop$: $sections as $obj
 link: $obj.url
 is-active: $obj.is-active
 border: $fpm.color.main.background.base
-border-active: $fpm.color.main.text
-text: $fpm.color.main.text-strong
-text-active: $fpm.color.main.text
+border-active: $fpm.color.main.custom.ten
+text: $light-white
+text-active: $fpm.color.main.custom.two
 
 
 --- pricing-cta-text: Try for Free
@@ -311,9 +313,10 @@ padding-vertical: 15
 if: $current-section.title is not null
 role: $fpm.type.heading-small
 style: bold
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.two
 link: $current-section.url
 padding-bottom if $current-subsection.title is not null: $fpm.space.space-2
+padding-bottom if $current-page.title is not null: $fpm.space.space-2
 
 --- ftd.row:
 width: fill
@@ -322,7 +325,7 @@ id: selection-container
 --- ftd.text: $current-subsection.title
 if: $current-subsection.title is not null
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 link: $current-subsection.url
 white-space: nowrap
 margin-right: 8
@@ -335,7 +338,7 @@ if: $current-page.title is not null
 
 --- ftd.text: ->
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 white-space: nowrap
 margin-right: 8
 
@@ -344,7 +347,7 @@ margin-right: 8
 --- ftd.text:$current-page.title 
 if: $current-page.title is not null
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 link: $current-page.url 
 white-space: nowrap
 margin-right: 8
@@ -357,7 +360,7 @@ width: fill
 align: right
 padding-vertical if $sub-sections is not empty: 15
 margin-top if $current-subsection.title is not null: 18
-margin-top if $current-section.title is not null: $fpm.space.space-1
+;margin-top if $current-section.title is not null: $fpm.space.space-1
 
 --- ftd.row:
 width: auto
@@ -368,9 +371,9 @@ $loop$: $sub-sections as $obj
 is-active: $obj.is-active
 link: $obj.url
 border: $fpm.color.main.background.step-1
-border-active: $fpm.color.main.text
-text: $fpm.color.main.text-strong
-text-active: $fpm.color.main.text
+border-active: $fpm.color.main.background.step-1
+text: $light-white
+text-active: $fpm.color.main.custom.ten
 
 
 
@@ -408,11 +411,11 @@ padding-vertical: 15
 
 --- ftd.row:
 width: fill
-spacing: 25
+spacing: 20
 id: left-side
 
 --- ftd.image:
-src: $assets.files.static.hamburger.png
+src: $assets.files.static.hamburger.svg
 width: 24
 height: auto
 $on-click$: toggle $sidebar-open
@@ -426,7 +429,7 @@ link: $site-url
 if: $site-logo is not null
 src: $site-logo
 width: auto
-height: 24
+height: 32
 position: center
 
 --- ftd.text: $site-name
@@ -483,7 +486,7 @@ width: auto
 --- ftd.text: $current-section.title
 if: $current-section.title is not null
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.two
 link: $current-section.url
 background-color: $fpm.color.main.background.base
 padding-vertical: 8
@@ -524,7 +527,7 @@ id: selection-container
 --- ftd.text: $current-subsection.title
 if: $current-subsection.title is not null
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 link: $current-subsection.url
 white-space: nowrap
 
@@ -536,7 +539,7 @@ if: $current-page.title is not null
 
 --- ftd.text: ->
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 white-space: nowrap
 
 --- container: selection-container
@@ -544,7 +547,7 @@ white-space: nowrap
 --- ftd.text: $current-page.title 
 if:  $current-page.title is not null
 role: $fpm.type.label-small
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.custom.ten
 link: $current-page.url 
 white-space: nowrap
 
@@ -664,6 +667,20 @@ products: $products
 bg-color: $bg-color
 text-color: $text-color
 
+
+--- container:first-container
+
+--- ftd.image:
+src: $assets.files.static.cross.svg
+height: 16
+width: auto
+anchor: window
+right: 58
+$on-click$: $sidebar-open= false
+top: 16
+z-index: 12
+
+
 --- container:  ftd.main
 
 --- ftd.column:
@@ -717,7 +734,6 @@ $on-click$: toggle $sidebar-open
 
 
 
-
 -- ftd.row site-link:
 optional string site-name: 
 
@@ -745,7 +761,7 @@ optional string link:
 ftd.color border: $fpm.color.main.background.base
 ftd.color border-active: $fpm.color.main.text
 ftd.color text: $fpm.color.main.text-strong
-ftd.color text-active: $fpm.color.main.text
+ftd.color text-active: $fpm.color.main.custom.two
 
 --- ftd.text: $title
 if: $link is null 
@@ -759,6 +775,7 @@ color if $is-active: $text-active
 align: center
 margin-left: 20
 white-space: nowrap
+style: heavy
 
 --- ftd.text: $title
 if: $link is not null 
@@ -773,6 +790,7 @@ link: $link
 align: center
 margin-left: 20
 white-space: nowrap
+style: heavy
 
 
 
@@ -797,12 +815,12 @@ role:$fpm.type.label-small
 style: bold
 min-width: fit-content
 margin-bottom: $fpm.space.space-4
-color: $fpm.color.main.text-strong
-color if $toc.is-active: $fpm.color.main.text
+color: $light-white
+color if $toc.is-active: $fpm.color.main.custom.two
 padding-bottom: $fpm.space.space-3
 border-bottom: 2
 border-color: $fpm.color.main.background.step-1
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-color if $toc.is-active: $fpm.color.main.custom.ten
 
 --- ftd.text:
 if: $toc.url is null
@@ -811,10 +829,10 @@ role:$fpm.type.label-small
 style: bold
 min-width: fit-content
 margin-bottom: $fpm.space.space-4
-color: $fpm.color.main.text-strong
-color if $toc.is-active: $fpm.color.main.text
+color: $light-white
+color if $toc.is-active: $fpm.color.main.custom.two
 border-color: $fpm.color.main.background.step-1
-border-color if $toc.is-active: $fpm.color.main.background.base
+border-color if $toc.is-active: $fpm.color.main.custom.ten
 padding-left: $fpm.space.space-3
 
 
@@ -1025,10 +1043,10 @@ style: bold
 link: $link
 white-space: nowrap
 padding-bottom: 4
-color: $fpm.color.main.text-strong
-color if $is-active: $fpm.color.main.text
+color: $light-white
+color if $is-active: $fpm.color.main.custom.ten
 border-color: $fpm.color.main.background.step-2
-border-color if $is-active: $fpm.color.main.text
+border-color if $is-active: $fpm.color.main.custom.two
 border-bottom: 2
 margin-bottom if not $is-active: 4
 margin-bottom if $is-active: 8
@@ -1042,11 +1060,10 @@ style: bold
 white-space: nowrap
 padding-bottom: 4
 border-bottom:2
-color: $fpm.color.main.text-strong
+color: $light-white
 border-color: $fpm.color.main.background.step-2
-border-color if $is-active: $fpm.color.main.text
-color if $is-active: $fpm.color.main.text
-color if $is-active: $fpm.color.main.text
+border-color if $is-active: $fpm.color.main.custom.two
+color if $is-active: $fpm.color.main.custom.ten
 margin-bottom if not $is-active: 4
 margin-bottom if  $is-active: 8
 

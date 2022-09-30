@@ -1,0 +1,22 @@
+-- import: fifthtry.github.io/dash-dash-ds as ds
+-- import: fifthtry.github.io/dash-dash-ds/assets
+
+
+-- ds.image image-page: $file-name
+caption file-name:
+ftd.image-src src:
+src: $src
+
+
+-- ds.page: Image with Caption
+
+--- ds.image: This is the image with caption
+if: not $ds.is-mobile
+src: $assets.files.static.image-placeholder.png
+width: 500
+
+--- ds.image: This is the image with caption
+if: $ds.is-mobile
+src: $assets.files.static.image-placeholder.png
+width: fill
+
