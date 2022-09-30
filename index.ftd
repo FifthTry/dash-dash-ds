@@ -241,7 +241,7 @@ optional ftd.color mobile-sidebar-base:
 boolean login-button: $login-button
 fpm.toc-item list footer-nav: $footer-nav
 fpm.toc-item list footer-toc: $footer-toc
-ps.product-data list products: $ps.example-product
+ps.product-data list products: $ps.product
 boolean show-floater: $show-floater
 ftd.color bg-color: $fpm.color.main.background.step-1
 ftd.color bg-hover: $fpm.color.main.background.step-2
