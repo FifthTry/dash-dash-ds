@@ -4704,3 +4704,43 @@ optional ftd.image-src post-image:
 optional body body:
 string post-url:
 author-meta author:
+
+
+
+
+-- ftd.text yellowmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.custom.two
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.text greenmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.success.text
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
+-- ftd.text redmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.error.text
+padding-horizontal: 2
+margin-right: 4
