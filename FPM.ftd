@@ -21,10 +21,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 
 # Home: /
 
-- Image: /image/
-- Floater: /floater/
-
-# Docs: -/fifthtry.github.io/doc-site/docs/
+- Using dash-dash-ds: -/fifthtry.github.io/doc-site/docs/
 - How to use blog: -/fifthtry.github.io/doc-site/documentation/blog-docs/
 
 
