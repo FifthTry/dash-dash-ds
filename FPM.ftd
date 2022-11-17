@@ -24,6 +24,27 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 - Using dash-dash-ds: -/fifthtry.github.io/doc-site/docs/
 - How to use blog: -/fifthtry.github.io/doc-site/docs/blog/
 
+# Blog: /featured-posts/
+
+## Posts: /featured-posts/
+
+- News & Culture: /blog-articles/category-1/
+
+  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
+
+- Technology & Learning: /blog-articles/category-2/
+
+  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+  - What rust gives us?: /blog-articles/category-2/sample-post-4/
+
+## Authors: /blog-authors/amitu/
+
+- Amit Upadhyay: /blog-authors/amitu/
+- Abrar Khan: /blog-authors/abrar/
+- Arpita Jaiswal: /blog-authors/arpita/
+- Ganesh S Salunke: /blog-authors/ganesh/
+
 
 # Blog: /featured-posts/
 

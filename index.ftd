@@ -28,7 +28,6 @@ $processor$: fpm-apps
 
 -- boolean is-reader: false
 
-
 -- optional string copyright: © 2022 FifthTry. All rights reserved
 
 -- boolean sidebar-open: false
@@ -782,7 +781,7 @@ border-color if $toc.is-active: $fpm.color.main.custom.two
 fpm.toc-item list toc-obj: $sitemap.toc
 sticky: true
 width: 300
-align: top-left
+;align: top-left
 padding-left: 0
 padding-top: 16
 padding-right: 20
@@ -2951,14 +2950,6 @@ $processor$: toc
 - Support: /
 - Feedback: /
 
--- fpm.toc-item list footer-toc:
-$processor$: toc
-
-- Legal: /
-- Support: /
-- Feedback: /
-
-
 
 
 
@@ -3001,8 +2992,6 @@ string timestamp:
 optional body body:
 color: $fpm.color.main.text
 spacing: 16
-
-
 
 --- ftd.row: 
 id: dash-row
@@ -3139,7 +3128,7 @@ append-at: post-meta-container
 if: not $is-mobile
 wrap: true
 id: post-meta-container
-
+spacing: 16
 
 --- container: ftd.main
 
@@ -3346,7 +3335,6 @@ width: fill
 link: $url
 spacing: 12
 
-
 --- ftd.row: 
 id: dash-row
 width: fill
@@ -3377,18 +3365,12 @@ align: center
 
 --- container: dash-row
 
-
-
 --- ftd.text: $title
 role: $fpm.type.heading-medium
 color: $light-white
 width: fill
 
-
-
 --- container: text-container
-
-
 
 --- ftd.image:
 src: $image
@@ -3510,8 +3492,6 @@ align: center
 role: $fpm.type.heading-small
 color: $light-white
 
-
-
 --- container: link-parent
 
 --- ftd.row:
@@ -3558,7 +3538,6 @@ margin-top: 8
 
 --- ftd.row:
 spacing: 2
-
 
 --- ftd.text: $author.title
 role: $fpm.type.fine-print
@@ -3658,8 +3637,6 @@ align: center
 --- ftd.text: $title
 role: $fpm.type.heading-small
 color: $light-white
-
-
 
 --- container: ftd.main
 
@@ -3814,9 +3791,6 @@ role: $fpm.type.heading-small
 color: $light-white
 link: $url
 
-
-
-
 --- container: ftd.main
 
 --- ftd.row:
@@ -3850,6 +3824,8 @@ color: $fpm.color.main.text
 --- ftd.text:
 text: $body
 role: $fpm.type.copy-relaxed
+height: 120
+overflow-y: hidden
 color: $light-white
 link: $url
 
@@ -3978,9 +3954,6 @@ shadow-size: 0
 shadow-blur: 4
 shadow-color: $fpm.color.main.custom.two
 
-
-
-
 --- container: auth-container
 
 --- ftd.column:
@@ -4041,7 +4014,6 @@ color: $light-white
 --- ftd.text: :
 role: $fpm.type.heading-large
 color: $fpm.color.main.custom.two
-
 
 --- container: changes-one
 
@@ -4188,6 +4160,12 @@ author-meta author:
 
 
 
+
+
+
+
+
+
 -- ftd.text yellowmarker: text
 color: $fpm.color.main.background.step-1
 background-color: $fpm.color.main.custom.two
@@ -4265,4 +4243,3 @@ padding-horizontal: 24
 color: $fpm.color.main.text-strong
 background-color:$fpm.color.main.cta-primary.base
 border-radius:8
-
