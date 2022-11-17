@@ -10,7 +10,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
 -- fpm.dependency: fifthtry.github.io/color-doc as cs
 -- fpm.dependency: fifthtry.github.io/admonitions as cbox
--- fpm.dependency: fifthtry.github.io/doc-site
+-- fpm.dependency: fifthtry.github.io/app-switcher 
 
 -- fpm.auto-import: cbox
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config

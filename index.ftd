@@ -3,6 +3,8 @@
 -- import: fifthtry.github.io/dash-dash-ds/assets
 -- import: fifthtry.github.io/product-switcher as ps
 -- import: fifthtry.github.io/dash-dash-ds/header as h
+-- import: fifthtry.github.io/app-switcher as apps-switcher
+
 
 -- ftd.text green: text
 role: $fpm.type.copy-tight
@@ -17,6 +19,14 @@ dark: #c00
 light: #333333
 dark: #333333
 
+-- fpm.app-ui apps:
+$processor$: fpm-apps
+
+-- string wall-message: Please, login via clicking on below button
+
+-- string login-url: /
+
+-- boolean is-reader: false
 
 
 -- optional string copyright: © 2022 FifthTry. All rights reserved
@@ -27,11 +37,6 @@ dark: #333333
 
 -- boolean show-github: false
 
--- boolean first: true
-
--- boolean last: false
-
--- boolean middle: false
 
 -- boolean show-dark-mode-switcher: false
 
@@ -219,6 +224,7 @@ Feel free to check [our documentation](https://fpm.dev/) or jump into our [Fifth
 -- ftd.column page:
 optional caption title:
 optional body body:
+fpm.app-ui apps: $apps
 boolean pricing-cta: $pricing-cta
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
@@ -295,6 +301,7 @@ widthfill: $widthfill
 body-text-color: $body-text-color
 shadow-color: $shadow-color
 github-url: $github-url
+apps: $apps
 
 --- container: ftd.main
 
@@ -315,7 +322,7 @@ bg-color: $bg-color
 bg-hover: $bg-hover
 text-color: $text-color
 github-url: $github-url
-
+apps: $apps
 
 
 
@@ -331,6 +338,7 @@ ftd.color body-text-color:
 ftd.color bg-color:
 ftd.color bg-hover: 
 ftd.color text-color: 
+fpm.app-ui apps: $apps
 optional string github-url:
 ps.product-data list product:
 optional caption title:
@@ -372,6 +380,10 @@ body-text-color: $body-text-color
 shadow-color: $shadow-color
 github-url: $github-url
 
+
+--- apps-switcher.app-switcher:
+apps: $apps
+
 --- ftd.row:
 max-width if $toc is empty: 800
 max-width if $widthfill: fill
@@ -382,7 +394,7 @@ padding-vertical: 48
 margin-right: 100
 
 --- ftd.column:
-id: main-container
+id: main-content-wrap
 max-width if $widthfill: fill
 max-width if $toc is empty: 1104
 max-width if $widthfill: fill
@@ -407,10 +419,22 @@ border-radius : 10
 --- h0: $title
 if: $title is not null
 
+--- wall-box:
+if: not $is-reader
+
+
+--- container: main-content-wrap
+
+--- ftd.column:
+if: $is-reader
+width: fill
+id: main-container
+
 --- markdown:
 if: $body is not null
 
 $body
+
 
 --- container: main-row
 
@@ -444,6 +468,7 @@ ftd.color bg-hover:
 optional caption title:
 optional body body: 
 ftd.color text-color: 
+fpm.app-ui apps: $apps
 fpm.toc-item list footer-toc:
 ps.product-data list products:
 fpm.toc-item list sections:  
@@ -485,24 +510,42 @@ text-color: $text-color
 github-url: $github-url
 
 --- container: ftd.main
+
+--- apps-switcher.app-switcher:
+apps: $apps
+
+
 --- ftd.row:
 width: fill
 
 --- ftd.column:
-id: main-container
+id: main-content-wrap-mobile
 width: fill
 align: top
 min-height: calc 100vh
 padding-horizontal: 20
 padding-vertical: 20
 
+
 --- h0: $title
 if: $title is not null
+
+--- wall-box:
+if: not $is-reader
+
+
+--- container: main-content-wrap-mobile
+
+--- ftd.column:
+if: $is-reader
+width: fill
+id: main-container
 
 --- markdown:
 if: $body is not null
 
 $body
+
 
 --- container: ftd.main
 
@@ -2756,554 +2799,6 @@ text-align: center
 
 
 
-
-
-
--- ftd.row slide:
-caption title:
-width: fill
-background-color: $fpm.color.main.background.base
-padding-vertical: 48
-padding-horizontal: 24
-open: true
-append-at: profile
-
---- ftd.row:
-id: profile
-
---- container: ftd.main
-
---- ftd.row:
-id: kkk 
-spacing: 12
-top: 340
-top if $is-mobile: 440
-left if not $is-mobile: 340
-left if $is-mobile: 150
-anchor: parent
-z-index: 1000
-
---- ftd.row:
-padding-vertical: $fpm.space.space-1
-padding-horizontal: $fpm.space.space-1
-border-radius: 100
-background-color: $fpm.color.main.text-strong
-margin-top: $fpm.space.space-1
-$on-click$: $last = false
-background-color if $first == true: $fpm.color.main.background.step-2
-$on-click$: $middle = false
-$on-click$: $first = true
-width: fill
-
---- container: kkk
-
---- ftd.row:
-padding-vertical: $fpm.space.space-1
-padding-horizontal: $fpm.space.space-1
-border-radius: 100
-background-color: $fpm.color.main.text-strong
-margin-top: $fpm.space.space-1
-$on-click$: $last = false
-background-color if $middle == true: $fpm.color.main.background.step-2
-$on-click$: $first = false
-$on-click$: $middle = true
-
---- container: kkk
-
---- ftd.row:
-padding-vertical: $fpm.space.space-1
-padding-horizontal: $fpm.space.space-1
-border-radius: 100
-background-color: $fpm.color.main.text-strong
-background-color if $last == true: $fpm.color.main.background.step-2
-margin-top: $fpm.space.space-1
-$on-click$: $last = true
-$on-click$: $first = false
-$on-click$: $middle = false
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-one:
-if: $first
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-
---- slide-one-desktop: $title
-if: not $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
---- container: ftd.main
-
---- slide-one-mobile: $title
-if: $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-one-desktop:
-if: $first
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 287
-
---- ftd.column:
-id: switch
-spacing: 12
-width: percent 50
-align: center
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  12
-border-bottom: 2
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
---- container: ftd.main
-
---- ftd.image:
-src: $src
-width: percent 50
-height: 287
-
-
-
-
-
-
-
-
-
-
--- ftd.column slide-one-mobile:
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 380
-spacing: 12
-
---- ftd.image:
-src: $src
-width: fill
-height: 204
-
---- container: ftd.main
-
---- ftd.column:
-id: switch
-width: fill
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  16
-border-bottom: 2
-padding-bottom: 4
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-two:
-if: $middle
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-
---- slide-two-desktop:$title
-if:not $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
---- slide-two-mobile:$title
-if: $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-two-desktop:
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 287
-
---- ftd.column:
-shadow-offset-x: 2
-shadow-offset-y: 0
-shadow-size: 2
-shadow-blur: 38
-shadow-color: $fpm.color.main.background.base
-width: percent 50
-height: 287
-z-index: 99
-
---- ftd.row:
-height: fill
-width: fill
-
---- ftd.column:
-align: center
-spacing: 12
-id: switch
-width: fill
-
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  12
-border-bottom: 2
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
---- container: ftd.main
-
---- ftd.image:
-src: $src
-width: percent 50
-height: 287
-
-
-
-
-
-
-
-
-
-
--- ftd.column slide-two-mobile:
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 380
-spacing: 24
-
---- ftd.image:
-src: $src
-width: fill
-height: 204
-
---- container: ftd.main
-
---- ftd.column:
-shadow-offset-x: 0
-shadow-offset-y: -14
-shadow-size: 2
-shadow-blur: 38
-shadow-color: $fpm.color.main.background.base
-width: fill
-z-index: 99
-
---- ftd.column:
-align: center
-spacing: 12
-id: switch
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  12
-border-bottom: 2
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-three:
-if: $last
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-
---- slide-three-desktop:$title
-if: not $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
---- slide-three-mobile:$title
-if: $is-mobile
-subtitle: $subtitle
-body: $body
-src: $src
-
-
-
-
-
-
-
-
-
-
--- ftd.row slide-three-desktop:
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 287
-
---- ftd.column:
-shadow-offset-x: 12
-shadow-offset-y: 0
-shadow-size: 2
-shadow-blur: 38
-shadow-color: $fpm.color.main.background.base
-width: percent 50
-height: 287
-z-index: 99
-
---- ftd.row:
-height: fill
-width: fill
-
---- ftd.column:
-align: center
-spacing: 12
-id: switch
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  12
-border-bottom: 2
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
---- container: ftd.main
-
---- ftd.image:
-src: $src
-width: percent 50
-height: 287
-
-
-
-
-
-
-
-
-
-
--- ftd.column slide-three-mobile:
-caption title:
-string subtitle:
-body body:
-ftd.image-src src:
-width: fill
-height: 380
-spacing: 24
-
---- ftd.image:
-src: $src
-width: fill
-height: 204
-
---- container: ftd.main
-
---- ftd.column:
-id: switch
-shadow-offset-x: 0
-shadow-offset-y: -56
-shadow-size: 2
-shadow-blur: 38
-shadow-color: $fpm.color.main.background.base
-width: fill
-z-index: 99
-
---- ftd.text: $title
-role: $fpm.type.label-big
-style: semi-bold
-padding-bottom: 4
-color: $fpm.color.main.text
-border-color: $fpm.color.main.text
-
---- ftd.row:
-anchor: parent
-width: 32
-border-color: $fpm.color.main.text-strong
-top:  20
-border-bottom: 2
-left: 0
-
---- container: switch
-
---- ftd.text: $subtitle
-role: $fpm.type.heading-large
-style: semi-bold
-color: $fpm.color.main.text
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text
-
-
-
-
-
-
-
-
-
-
 -- ftd.text heading: $title
 caption title:
 role: $fpm.type.heading-large
@@ -4729,3 +4224,45 @@ color: $fpm.color.main.background.step-1
 background-color: $fpm.color.main.error.text
 padding-horizontal: 2
 margin-right: 4
+
+
+
+
+-- ftd.column wall-box:
+background-color: $fpm.color.main.background.base
+width: 614
+width if $is-mobile: 200
+border-width: 1
+padding-vertical: 35
+padding-horizontal: 32
+shadow-offset-x: 3
+shadow-offset-y: 4
+shadow-size: 1
+shadow-blur: 4
+border-top: 3
+border-radius: 8
+border-color: $fpm.color.main.border
+align: center
+
+
+--- ftd.text: $wall-message
+text-align: center
+role: $fpm.type.heading-medium
+color: $fpm.color.main.text-strong
+width: fill
+padding-bottom: 64
+
+
+--- ftd.row:
+align: center
+
+--- ftd.text: LOGIN
+link: $login-url
+text-align: center
+role: $fpm.type.copy-tight
+padding-vertical: 12
+padding-horizontal: 24
+color: $fpm.color.main.text-strong
+background-color:$fpm.color.main.cta-primary.base
+border-radius:8
+
