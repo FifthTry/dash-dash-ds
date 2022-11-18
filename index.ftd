@@ -26,7 +26,7 @@ $processor$: fpm-apps
 
 -- string login-url: /
 
--- boolean is-reader: false
+-- boolean is-reader: true
 
 -- optional string copyright: © 2022 FifthTry. All rights reserved
 
