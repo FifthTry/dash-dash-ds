@@ -16,14 +16,15 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
 -- fpm.auto-import: cs
+-- fpm.dependency: fifthtry.github.io/doc-site
 
 
 -- fpm.sitemap:
 
 # Home: /
 
-- Using dash-dash-ds: https://fifthtry.github.io/doc-site/docs/
-- How to use blog: https://fifthtry.github.io/doc-site/docs/blog/
+- Using dash-dash-ds: -/fifthtry.github.io/doc-site/docs/
+- How to use blog: -/fifthtry.github.io/doc-site/docs/blog/
 
 # Blog: featured-posts/
 
@@ -45,6 +46,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 - Abrar Khan: blog-authors/abrar/
 - Arpita Jaiswal: blog-authors/arpita/
 - Ganesh S Salunke: blog-authors/ganesh/
+
 
 # GitHub
 url: https://github.com/FifthTry/dash-dash-ds
