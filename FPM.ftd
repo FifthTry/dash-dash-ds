@@ -11,12 +11,13 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/dash-dash-ds/main
 -- fpm.dependency: fifthtry.github.io/color-doc as cs
 -- fpm.dependency: fifthtry.github.io/admonitions as cbox
 -- fpm.dependency: fifthtry.github.io/app-switcher 
+-- fpm.dependency: fifthtry.github.io/doc-site
 
 -- fpm.auto-import: cbox
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/FPM/config
 -- fpm.auto-import: fifthtry.github.io/dash-dash-ds/assets
 -- fpm.auto-import: cs
--- fpm.dependency: fifthtry.github.io/doc-site
+
 
 
 -- fpm.sitemap:
