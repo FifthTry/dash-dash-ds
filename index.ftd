@@ -135,7 +135,7 @@ On successful execution of workflow, the `gh-pages` branch would be created.
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `dash-dash-ds` is designed for you to create FTD web-sites. 
 
-Check out our simple and easy [documentation](docs/) to learn more about 
+Check out our simple and easy `documentation` to learn more about 
 `dash-dash-ds`.
 
 -- h2: 🚀 Project Structure
