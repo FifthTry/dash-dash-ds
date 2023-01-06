@@ -64,9 +64,9 @@ $processor$: fpm-apps
 
 -- optional string brand-caption:
 
--- optional string brand-site-url: index.html
+-- optional string brand-site-url: /index.html
 
--- string github: index.html
+-- string github: /index.html
 
 -- optional string site-name: 
 
@@ -74,7 +74,7 @@ $processor$: fpm-apps
 dark: $assets.files.static.site-icon.png.dark
 light: $assets.files.static.site-icon.png.light
 
--- string site-url: index.html
+-- string site-url: /index.html
 
 -- record testimonials:
 caption title:
@@ -135,7 +135,7 @@ On successful execution of workflow, the `gh-pages` branch would be created.
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `dash-dash-ds` is designed for you to create FTD web-sites. 
 
-Check out our simple and easy [documentation](/docs/) to learn more about 
+Check out our simple and easy [documentation](docs/) to learn more about 
 `dash-dash-ds`.
 
 -- h2: 🚀 Project Structure
